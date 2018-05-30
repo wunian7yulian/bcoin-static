@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="browsermode" content="application">
+		<meta name="x5-page-mode" content="app">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="keywords" content="币果理财">
+		<title>币果理财注册</title>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				font-family: PingFangSC-Regular, sans-serif;
+				font-weight: normal;
+				font-stretch: normal;
+				letter-spacing: 0rem;
+				background-color: rgb(245,244,244);
+			}
+			
+			.regContainer {
+				margin: 0 auto;
+				width: 10rem;
+				height: auto;
+				padding-bottom: 0.7rem;
+				background: url(images/registered/registeredBG.jpg) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				padding-top: 0.001rem;
+			}
+			
+			.regContainer .tit {
+				width: 7.85rem;
+				height: 3.67rem;
+				background-color: #e35246;
+				margin: 0.96rem auto 0.43rem auto;
+				padding-top: 0.13rem;
+			}
+			
+			.regContainer .tit .spanwrap {
+				width: 7.48rem;
+				height: 2.68rem;
+				border: dashed 0.03rem #ffd6ca;
+				margin: 0 auto;
+				text-align: center;
+				padding-top: .8rem;
+			}
+			
+			.regContainer .tit .spanwrap p {
+				font-size: 0.41rem;
+				color: #ffffff;
+			}
+			
+			.regContainer .tit .spanwrap span {
+				display: inline-block;
+				width: 0.15rem;
+				height: 0.15rem;
+				margin-bottom: 0.07rem;
+				border: solid 0.04rem #ffffff;
+				transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+			}
+			
+			.regContainer .lihe {
+				width: 7.786rem;
+				height: 2.213rem;
+				display: block;
+				margin: 0 auto;
+			}
+			
+			.regContainer .contwrap {
+				width: 7.87rem;
+				height: 6.29rem;
+				background-color: #ffffff;
+				border-radius: 0.05rem;
+				margin: 0 auto;
+				padding: 0.69rem 0.48rem;
+				position: relative;
+			}
+			.regContainer .contwrap #openApp {
+				display: block;
+				text-decoration: none;
+				margin: 0 auto;
+				width: 7.48rem;
+				line-height: 1.07rem;
+				background-color: #d84e43;
+				border-radius: 0.53rem;
+				font-size: 0.43rem;
+				color: #FFFFFF;
+				text-align: center;
+			}
+			.regContainer .contwrap .xian {
+				width: 7.36rem;height: 0.04rem;border-bottom: dashed 0.01rem #d84e43;
+				margin: 0 auto;
+				margin-top: 0.75rem;
+			}
+			.regContainer .contwrap .cont {
+				margin: 0.64rem auto;
+			}
+			
+			.contwrap .cont p {
+				margin-bottom: 0.56rem;
+			}
+			
+			.contwrap .cont span,
+			.contwrap .cont img {
+				display: inline-block;
+				box-sizing: border-box;
+				vertical-align: middle;
+			}
+			
+			.contwrap .cont img {
+				width: 0.85rem;
+				height: 0.85rem;
+				margin-left: .17rem;
+			}
+			
+			.contwrap .cont span {
+				font-size: 0.37rem;
+				line-height: 0.64rem;
+				color: #666666;
+				margin-left: 0.3rem;
+			}
+			
+			.contwrap .cont span b {
+				color: #df3535;
+			}
+			#popup {
+				display: none;
+				width: 100%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 20;
+				background: rgba(0, 0, 0, 0.6);
+			}
+			
+			.popup-content {
+				position: relative;
+				width: 83%;
+				padding: 2rem 0 0 0;
+				margin: 0 auto;
+				text-align: center;
+				color: #fff;
+				font-size: 0.51rem;
+			}
+			
+			.pop-img {
+				height: 2.653rem;
+				position: absolute;
+				right: .5rem;
+				top: .2rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="regContainer">
+			<div class="tit">
+				<div class="spanwrap">
+					<p style="font-size: 0.73rem;">恭喜您!</p>
+					<p>已经成功领取币果理财现金红包！</p>
+				</div>
+			</div>
+			<img class="lihe" src="images/registered/lihe.png" />
+			<div class="contwrap">
+				<a href="javascript:;" id="openApp" onclick="downApp()">安装币果理财APP</a>
+				<div class="xian"></div>
+				<div class="cont">
+					<p>
+						<img src="images/registered/registeredIcon1.png" />
+						<span>BitMEX加密货币存管，保障资金<b>安全</b></span>
+					</p>
+					<p>
+						<img src="images/registered/registeredIcon2.png" />
+						<span>数字货币再增值，年回报率<b>10%</b></span>
+					</p>
+					<p>
+						<img src="images/registered/registeredIcon3.png" />
+						<span>保本保息，随存随取，零手续费交易</span>
+					</p>
+				</div>
+			</div>
+			<!-- 弹层 -->
+			<div id="popup" onclick="tanX()">
+				<div class="pop-main">
+					<div class="popup-content">
+						<p>请点击右上角“···”</p>
+						<p style="margin-top: .5rem;">选择在浏览器中打开，</p>
+						<p>即可下载安装。</p>
+					</div>
+					<img class="pop-img" src="images/registered/xujian.png" />
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//获取URL参数方法
+			var test = window.location.search;
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return decodeURI(r[2]);
+				return null;
+			}
+			var code = GetQueryString("code");
+			if(code == 410){
+				$('.spanwrap p:first-child').text('亲爱的用户');
+				$('.spanwrap p:first-child').css('font-size','0.43rem');
+				$('.spanwrap p:last-child').text('您已经领取过现金红包');
+				$('#openApp').text('打开币果理财APP');
+			}
+		</script>
+		<script type="text/javascript">
+			// 立即下载
+			function downApp(){
+				var u = navigator.userAgent, 
+				isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1,
+				isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+				urls = {
+					'android':'http://ftp-apk.pcauto.com.cn/pub/autoclub-5000-autowapDL1.apk',
+					'ios':'https://itunes.apple.com/cn/app/zhong-guo-che-you-hui/id640447959',
+				};
+				if(isAndroid){
+					//判断是否微信浏览器打开
+					var ua = navigator.userAgent.toLowerCase();
+					if(ua.match(/MicroMessenger/i) == "micromessenger") {
+						// 是
+						document.getElementById("popup").style.display = "block";
+						window.location.href=urls.android;
+					} else {
+						window.location.href=urls.android;
+						document.getElementById("popup").style.display = "none";
+					}
+				} else if(isiOS){
+					window.location.href=urls.ios;
+				}
+			}
+			function tanX() {
+				document.getElementById("popup").style.display = "none";
+			}
+		</script>
+	</body>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+</html>

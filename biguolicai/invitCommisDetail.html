@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="browsermode" content="application">
+		<meta name="x5-page-mode" content="app">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="keywords" content="币果理财">
+		<title>收益明细</title>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				font-family: PingFangSC-Regular, sans-serif;
+				font-weight: normal;
+				font-stretch: normal;
+				letter-spacing: 0rem;
+				background: #f7f7f7;
+			}
+			.detContainer {
+				margin: 0 auto;
+				width: 10rem;
+				height: auto;
+				padding-bottom: 2rem;
+			}
+			.detContainer .cont_wrap {
+				width: 9.44rem;
+				margin: 0 auto;
+			}
+			.detContainer .cont_wrap .data {
+				font-size: 0.43rem;
+				color: #875605;
+				margin: 0.3rem 0 0.27rem 0.53rem;
+			}
+			.detContainer .cont_wrap .p2 {
+				font-size: 0.35rem;
+				color: #875605;
+				margin: 0 0 0.23rem 0.53rem;
+			}
+			.detContainer .cont_wrap .zong {
+				margin-left: 0.27rem;
+			}
+			.detContainer ul {
+				width: 9.36rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.13rem 0.09rem 0.01rem 
+					rgba(224, 224, 224, 0.39);
+				border-radius: 0.27rem;
+				margin: 0 auto;
+			}
+			.detContainer ul li {
+				list-style: none;
+				height: 1.76rem;
+				color: #875605;
+				border-bottom: 0.01rem solid #e6e6e6;
+			}
+			.detContainer ul li:last-child{
+				border:none;
+			}
+			.detContainer ul li p:nth-child(1) {
+				float: left;
+				font-size: 0.37rem;
+				line-height: .6rem;
+				padding: 0 0.49rem;
+				text-align: center;
+			}
+			.detContainer ul li span:nth-child(1) {
+				display:inline-block;
+				margin-top: 0.33rem;
+			}
+			.detContainer ul li p:nth-child(2){
+				font-size: 0.48rem;
+				font-weight: bold;
+				float: right;
+				padding: 0 0.49rem;
+				padding-top: 0.75rem;
+				text-align: right;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="detContainer">
+			<img style="width: 10rem;" src="images/invitation/shbanner.png"/>
+			<div class="cont_wrap">
+				<!--<p class="data">2018年5月</p>
+				<p class="p2">
+					<span>已收佣金(≈元)</span>
+					<span class="zong">100</span>
+				</p>
+				<ul id="list">
+					<li>
+						<p>
+							<span>每日佣金</span><br />
+							<span>2018-8-19</span>
+						</p>
+						<p>282.3</p>
+					</li>
+				</ul>-->
+			</div>
+		</div>
+		<script type="text/javascript">
+			
+		     
+			//获取URL参数方法
+			var test = window.location.search;
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return decodeURI(r[2]);
+				return null;
+			}
+			var userId = GetQueryString("userId");
+			var url = "http://192.168.1.83/app/mine/detailCommission";
+			$.ajax({
+				url: url,
+				type: 'post',
+				dataType: 'json',
+				headers: {
+				   'userId': userId,
+				},
+				contentType: 'application/json;charset=UTF-8',
+				success: function(res) {
+					if(res.message.code == 200) {
+						var listArr = res.data.monthList;
+						for (var i = 0; i < listArr.length; i++) {
+					     	var dayList = listArr[i].dayList;
+					     	var list = $('.cont_wrap');
+					        list.append("<p class='data'>"+listArr[i].month+"</p>"+"<p class='p2'>"+"<span>已收佣金(≈元)</span>"+"<span class='zong'>"+listArr[i].totalCommission+
+					        "</span>"+"</p>"+"<ul class='ul'>"+"</ul>");
+					     };
+					     for (var d = 0; d < dayList.length; d++) {
+					        var ul = $('.ul');
+					        ul.append("<li>"+"<p>"+"<span>每日佣金</span><br />"+"<span>"+dayList[d].dateDes+"</span>"+"</p>"+"<p>"+dayList[d].amount+"</p>"+"</li>")
+					     }
+				    }else {
+				    		alert(res.message.msg);
+				    }
+				}
+			});
+		</script>
+	</body>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="browsermode" content="application">
+		<meta name="x5-page-mode" content="app">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="keywords" content="币果理财">
+		<title>币果理财APP下载</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				font-family: PingFangSC-Regular, sans-serif;
+				font-weight: normal;
+				font-stretch: normal;
+				letter-spacing: 0rem;
+			}
+			
+			.Downcontainer {
+				margin: 0 auto;
+				width: 10rem;
+				height: auto;
+				padding-bottom: 1rem;
+				background: url(images/registered/DownloadBG.jpg) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+			}
+			
+			.Downcontainer .tit {
+				width: 100%;
+				text-align: center;
+			}
+			
+			.Downcontainer .tit p {
+				font-size: 0.51rem;
+				line-height: 0.64rem;
+				color: #df3535;
+				padding-top: 6.75rem;
+			}
+			
+			.Downcontainer #openApp {
+				display: block;
+				text-decoration: none;
+				width: 7.84rem;
+				line-height: 1.12rem;
+				background-color: #ffc962;
+				box-shadow: 0rem 0.09rem 0.32rem 0rem rgba(216, 111, 50, 0.29);
+				border-radius: 0.56rem;
+				font-size: 0.43rem;
+				color: #df3535;
+				text-align: center;
+				margin: 0 auto;
+				margin-top: 0.69rem;
+			}
+			
+			.Downcontainer .cont {
+				width: 7.9rem;
+				height: 4.28rem;
+				background-color: #ffffff;
+				box-shadow: 0.04rem 0.08rem 0.09rem 0rem rgba(216, 111, 50, 0.19);
+				border-radius: 0.13rem;
+				margin: 1.09rem auto;
+				padding-top: 0.57rem;
+				padding-left: 0.51rem;
+			}
+			
+			.Downcontainer .cont p {
+				margin-bottom: 0.56rem;
+			}
+			
+			.Downcontainer .cont span,
+			.Downcontainer .cont img {
+				display: inline-block;
+				box-sizing: border-box;
+				vertical-align: middle;
+			}
+			
+			.Downcontainer .cont img {
+				width: 0.85rem;
+				height: 0.85rem;
+			}
+			
+			.Downcontainer .cont span {
+				font-size: 0.37rem;
+				line-height: 0.64rem;
+				color: #666666;
+				margin-left: 0.3rem;
+			}
+			
+			.Downcontainer .cont span b {
+				color: #df3535;
+			}
+			
+			#popup {
+				display: none;
+				width: 100%;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				z-index: 20;
+				background: rgba(0, 0, 0, 0.6);
+			}
+			
+			.popup-content {
+				position: relative;
+				width: 83%;
+				padding: 2rem 0 0 0;
+				margin: 0 auto;
+				text-align: center;
+				color: #fff;
+				font-size: 0.51rem;
+			}
+			
+			.pop-img {
+				width: 1.866rem;
+				height: 2.653rem;
+				position: absolute;
+				right: .5rem;
+				top: .2rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="Downcontainer">
+			<div class="tit">
+				<p>注册壕送5BTC+45ETH见面礼</p>
+			</div>
+			<a href="javascript:;" id="openApp" onclick="downApp()">立即下载</a>
+			<div class="cont">
+				<p>
+					<img src="images/registered/registeredIcon1.png" />
+					<span>BitMEX加密货币存管，保障资金<b>安全</b></span>
+				</p>
+				<p>
+					<img src="images/registered/registeredIcon2.png" />
+					<span>数字货币再增值，年回报率<b>10%</b></span>
+				</p>
+				<p>
+					<img src="images/registered/registeredIcon3.png" />
+					<span>保本保息，随存随取，零手续费交易</span>
+				</p>
+			</div>
+			<!-- 弹层 -->
+			<div id="popup" onclick="tanX()">
+				<div class="pop-main">
+					<div class="popup-content">
+						<p>请点击右上角“···”</p>
+						<p style="margin-top: .5rem;">选择在浏览器中打开，</p>
+						<p>即可下载安装。</p>
+					</div>
+					<img class="pop-img" src="images/registered/xujian.png" />
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			// 立即下载
+			function downApp(){
+				var u = navigator.userAgent, 
+				isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1,
+				isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+				urls = {
+					'android':'http://ftp-apk.pcauto.com.cn/pub/autoclub-5000-autowapDL1.apk',
+					'ios':'https://itunes.apple.com/cn/app/zhong-guo-che-you-hui/id640447959',
+				};
+				if(isAndroid){
+					//判断是否微信浏览器打开
+					var ua = navigator.userAgent.toLowerCase();
+					if(ua.match(/MicroMessenger/i) == "micromessenger") {
+						// 是
+						document.getElementById("popup").style.display = "block";
+						window.location.href=urls.android;
+					} else {
+						window.location.href=urls.android;
+						document.getElementById("popup").style.display = "none";
+					}
+				} else if(isiOS){
+					window.location.href=urls.ios;
+				}
+			}
+			function tanX() {
+				document.getElementById("popup").style.display = "none";
+			}
+		</script>
+	</body>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+</html>

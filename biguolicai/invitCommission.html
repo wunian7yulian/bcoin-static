@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="browsermode" content="application">
+		<meta name="x5-page-mode" content="app">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="keywords" content="币果理财">
+		<title>我的佣金</title>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				font-family: PingFangSC-Regular, sans-serif;
+				font-weight: normal;
+				font-stretch: normal;
+				letter-spacing: 0rem;
+			}
+			.comContainer {
+				margin: 0 auto;
+				width: 10rem;
+				height: auto;
+				padding-bottom: 2rem;
+				text-align: center;
+			}
+			.comContainer .tit {
+				width: 10rem;
+				height: 5.75rem;
+				padding-top: 1.97rem;
+				background: url(images/invitation/yongban.png) no-repeat;
+				background-size: 100%;
+				background-position: center;
+				color: #ffffff;
+				font-size: 0.43rem;
+			}
+			.comContainer .tit .zong {
+				font-size: 0.97rem;
+			}
+			.comContainer .tit .zong2 {
+				width: 6.99rem;
+				height: 1.77rem;
+				padding: 0.5rem 0.6rem 0 0.6rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.11rem 0.1rem 0.01rem 
+					rgba(255, 143, 81, 0.25);
+				border-radius: 0.13rem;
+				margin: 2.1rem auto 0 auto;
+				color: #875605;
+				font-size: 0.37rem;
+				line-height: 0.7rem;
+			}
+			.comContainer .tit .zong2 .left {
+				float: left;
+				padding-right: 0.3rem;
+				border-right: 0.01rem solid #875605;
+			}
+			.comContainer .tit .zong2 .left .zong2num {
+				font-size: 0.64rem;
+			}
+			.comContainer .tit .zong2 .right {
+				float: right;
+			}
+			.comContainer .listitle {
+				width: 10rem;
+				line-height: 1.03rem;
+				background: url(images/invitation/ttitbj.png) no-repeat;
+				background-size: 100%;
+				background-position: center;
+				margin-top: 1.36rem;
+				font-size: 0.53rem;
+				color: #875605;
+			}
+			.comContainer ul li{
+				width: 10rem;
+				font-size: 0.48rem;
+				color: #875605;
+				list-style: none;
+			}
+			.comContainer ul li:nth-child(even)  {
+				background-color: #fff5ed;
+			}
+			.comContainer ul span {
+				display: inline-block;
+				width: 4.9rem;
+				line-height: 1.33rem;
+			}
+			.comContainer .mingwrap {
+				width: inherit;
+				position: fixed;
+				top: 1.35rem;
+				z-index: 20;
+			}
+			
+			.comContainer .mingxi {
+				display: inline-block;
+				float: right;
+				width: 1.5rem;
+				padding-left: 0.1rem;
+				line-height: 0.6rem;
+				background-color: rgba(255, 109, 64, 0.39);
+				border-radius: 0.28rem 0 0 0.28rem;
+				font-size: 0.32rem;
+				color: #FFFFFF;
+				text-decoration: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="comContainer">
+			<div class="tit">
+				<p class="zong"></p>
+				<p>累计已收佣金（≈元）</p>
+				<div class="zong2">
+					<div class="left">
+						<p>昨日已收佣金（≈元）</p>
+						<p class="zong2num">00</p>
+					</div>
+					<div class="right">
+						<p>一级合伙人: <span class="first"></span>人</p>
+						<p>二级合伙人: <span class="second"></span>人</p>
+					</div>
+				</div>
+			</div>
+			<div class="listitle">
+				近七日已收佣金 (≈元)
+			</div>
+			<ul id="list"></ul>
+			<div class="mingwrap">
+				<span class="mingxi">收益明细</span>
+			</div>
+		</div>
+		<script type="text/javascript">
+			//获取URL参数方法
+			var test = window.location.search;
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return decodeURI(r[2]);
+				return null;
+			}
+			var userId = GetQueryString("userId");
+			var url = "http://192.168.1.83/app/mine/totalCommission";
+			$.ajax({
+				url: url,
+				type: 'post',
+				dataType: 'json',
+				headers: {
+				   'userId': userId,
+				},
+				contentType: 'application/json;charset=UTF-8',
+				success: function(res) {
+					if(res.message.code == 200) {
+						$('.zong').text(res.data.totalCommission.totalIncome);
+						$('.zong2num').text(res.data.totalCommission.yesterDayCommission);
+						$('.first').text(res.data.totalCommission.firstLevelpartner);
+						$('.second').text(res.data.totalCommission.secondLevelpartner);
+						
+						var listArr = res.data.commissonList;
+					    for (var i = 0; i < listArr.length; i++) {
+					        var list = $('#list');
+					        list.append("<li>"+"<span>"+listArr[i].dateDes+"</span>"+"<span>"+listArr[i].amount+"</span>"+"</li>");
+					    };
+				    }else {
+				    		alert(res.message.msg);
+				    }
+				}
+			});
+			
+			//收益明细
+			$(".mingxi").on("click", function() {
+				if(userId == '' || userId == null) {
+					//唤醒原生登录
+					window.location='bb://1000##{"unlogin":"1"}';
+				} else {
+					window.location.href='invitCommisDetail.html?userId=' + userId;
+				}
+			})
+		</script>
+	</body>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+</html>

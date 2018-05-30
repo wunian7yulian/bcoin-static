@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="browsermode" content="application">
+		<meta name="x5-page-mode" content="app">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="keywords" content="币果理财">
+		<title>邀请好友</title>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				font-family: PingFangSC-Regular, sans-serif;
+				font-weight: normal;
+				font-stretch: normal;
+				letter-spacing: 0rem;
+			}
+			/* invitation.html */
+			.inviContainer {
+				margin: 0 auto;
+				width: 10rem;
+				height: auto;
+				padding-bottom: 0.77rem;
+				background-color: #ffa45a;
+			}
+			
+			.inviContainer .guiwrap {
+				width: inherit;
+				position: fixed;
+				top: 6.65rem;
+				z-index: 20;
+			}
+			
+			.inviContainer .guize {
+				float: right;
+				width: 1.37rem;
+			}
+			
+			.inviContainer .tit {
+				width: 10rem;
+			}
+			
+			.inviContainer .jiang1 {
+				width: 9.36rem;
+				height: 10.88rem;
+				background-color: #ffffff;
+				border-radius: 0.27rem;
+				border: solid 0.05rem #ff5a00;
+				margin: 0 auto;
+				text-align: center;
+				position: relative;
+			}
+			
+			.inviContainer .cai1 {
+				width: 4.26rem;
+				height: 1.42rem;
+				line-height: 1rem;
+				font-size: 0.43rem;
+				background: url(images/invitation/tiaofu.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				color: #FFFFFF;
+				position: absolute;
+				top: -.8rem;
+				left: 2.5rem;
+			}
+			
+			.inviContainer .jiang1 p {
+				width: 8.75rem;
+				height: 1.59rem;
+				font-size: 0.37rem;
+				line-height: 0.61rem;
+				color: #875605;
+				text-align: left;
+				margin: 1.17rem auto 0.45rem auto;
+			}
+			
+			.inviContainer .jiang1 p span {
+				color: #ff4717;
+			}
+			
+			.inviContainer .jiang2 {
+				width: 9.36rem;
+				height: 4.84rem;
+				background: url(images/invitation/lihe.png) no-repeat;
+				background-size: 2.37rem;
+				background-position-x: 0.47rem;
+				background-position-y: 2.08rem;
+				background-color: #ffffff;
+				border-radius: 0.27rem;
+				border: solid 0.05rem #ff5a00;
+				margin: 1.07rem auto 0.53rem auto;
+				position: relative;
+				text-align: center;
+			}
+			
+			.inviContainer .jiang2 p {
+				font-size: 0.37rem;
+				color: #875605;
+				text-align: right;
+				letter-spacing: -0.02rem;
+				margin: 0.9rem 0.23rem 0 0;
+			}
+			
+			.inviContainer .jiang2 .cha {
+				width: 3.2rem;
+				line-height: 0.77rem;
+				background-image: linear-gradient(0deg, #ffaa26 0%, #ffab27 7%, #feb640 52%, #ffc054 65%, #feda8a 100%), linear-gradient( #ff8a4d, #ff8a4d);
+				background-blend-mode: normal, normal;
+				border-radius: 0.38rem;
+				font-size: 0.32rem;
+				color: #FFFFFF;
+				margin: 0.44rem 0 0 4.32rem;
+				position: absolute;
+				z-index: 22;
+			}
+			
+			.inviContainer .jiang3 {
+				width: 9.36rem;
+				height: 20.67rem;
+				background-color: #ffffff;
+				border-radius: 0.27rem;
+				border: solid 0.05rem #ff5a00;
+				text-align: center;
+				margin: 0 auto;
+			}
+			
+			.inviContainer .jiang3 span {
+				font-size: 0.32rem;
+				color: #875605;
+				display: inline-block;
+			}
+			
+			.inviContainer .jiang3 .span2 {
+				margin: 0 1.37rem;
+			}
+			
+			.inviContainer .jiang3 .shuju {
+				width: 99.5%;
+				line-height: 1.44rem;
+				background-color: rgba(255, 237, 223, 0.55);
+				text-align: left;
+				margin: 0 auto;
+			}
+			
+			.inviContainer .jiang3 .shuju span {
+				display: inline-block;
+				font-size: 0.27rem;
+				color: #ff4717;
+				text-align: center;
+			}
+			
+			.inviContainer .jiang3 .shuju span:nth-child(1) {
+				width: 4rem;
+				text-align: left;
+				margin-left: 0.1rem;
+			}
+			
+			.inviContainer .jiang3 .shuju span:nth-child(2) {
+				width: 17%;
+			}
+			
+			.inviContainer .jiang3 .shuju span:nth-child(3) {
+				width: 20%;
+				float: right;
+				margin-right: 3%;
+			}
+			
+			.inviContainer .jiang3 .ming {
+				width: 8.57rem;
+				height: 0.97rem;
+				font-size: 0.37rem;
+				line-height: 0.61rem;
+				letter-spacing: -0.02rem;
+				color: #875605;
+				margin: 0.28rem auto 0.48rem auto;
+				text-align: left;
+			}
+			
+			.inviContainer .jiang3 .lizi {
+				width: 99.5%;
+				height: 5.6rem;
+				margin: 0 auto;
+				background-color: rgba(255, 245, 237, 0.55);
+			}
+			.inviContainer .jiang3 .lizi p {
+				text-align: left;
+				margin: 0 auto;
+				width: 8.85rem;
+				height: 1.17rem;
+				font-size: 0.27rem;
+				line-height: 0.45rem;
+				letter-spacing: -0.02rem;
+				color: #875605;
+			}
+			.inviContainer .jiang3 a {
+				text-decoration: none;
+			}
+			.inviContainer .wen {
+				width: 2.01rem;
+				line-height: 0.72rem;
+				font-size: 0.4rem;
+				color: #722a2f;
+				margin: 0.6rem auto 0.48rem auto;
+				background: url(images/invitation/tishi.png) no-repeat;
+				background-size: 2.01rem 0.38rem;
+				background-position: bottom;
+				text-align: center;
+			}
+			
+			.wencont {
+				width: 8.96rem;
+				height: 2.03rem;
+				font-size: 0.32rem;
+				line-height: 0.57rem;
+				letter-spacing: -0.02rem;
+				color: #722a2f;
+				margin: 0 auto 2.41rem auto;
+			}
+			
+			.wencont span {
+				display: inline-block;
+				width: 8.65rem;
+				font-size: 0.31rem;
+			}
+			
+			.wencont .dian {
+				display: inline-block;
+				width: 0.12rem;
+				height: 0.12rem;
+				background-color: #722a2f;
+				border-radius: 100%;
+				vertical-align: top;
+				margin-top: .22rem;
+				margin-right: 0.15rem;
+			}
+			
+			.inviContainer .but {
+				width: 10rem;
+				line-height: 1.41rem;
+				background-image: linear-gradient(0deg, #ffaa26 0%, #ffab27 7%, #feb640 52%, #ffc054 65%, #feda8a 100%), linear-gradient( #f6f7a4, #f6f7a4);
+				background-blend-mode: normal, normal;
+				border-radius: 0.67rem 0.67rem 0rem 0rem;
+				font-size: 0.56rem;
+				color: #bc3d16;
+				text-align: center;
+				position: fixed;
+				bottom: 0;
+				z-index: 25;
+			}
+			/*弹出警示*/
+			.guizePopup {
+				width: 10rem;
+				height: 50rem;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				z-index: 100;
+				padding-top: 4rem;
+				background: rgba(0, 0, 0, 0.7);
+				display: none;
+			}
+			.guizePopup .popup-content {
+				width: 9.36rem;
+				margin: 0 auto;
+				text-align: center;
+				border-radius: 0.3rem;
+			}
+			
+			.guizePopup .popup-content .tjiang1 {
+				position: relative;
+				width: 9.36rem;
+				height: 5rem;
+				padding-bottom: .2rem;
+				background-color: #fff;
+				margin: 0 auto;
+				border-radius: .3rem .3rem 0 0;
+			}
+			
+			.guizePopup .popup-content .tjiang1 .wencont {
+				text-align: left;
+				color: #875605;
+			}
+			
+			.guizePopup .popup-content .ttit1 {
+				width: 2.51rem;
+				line-height: 0.77rem;
+				background-image: linear-gradient(0deg, #ffaa26 0%, #ffab27 7%, #feb640 52%, #ffc054 65%, #feda8a 100%), linear-gradient( #ffffff, #ffffff);
+				background-blend-mode: normal, normal;
+				border-radius: 0.38rem;
+				border: solid 0.03rem #ff5a00;
+				color: #ffffff;
+				font-size: 0.43rem;
+				position: absolute;
+				left: 3.43rem;
+				top: -0.385rem;
+			}
+			
+			.guizePopup .popup-content .li2 {
+				margin-top: -0.1rem;
+				padding-top: .6rem;
+				background: #ffffff;
+				border-radius: 0 0 .3rem .3rem;
+			}
+			
+			.guizePopup .popup-content .tjiang2 {
+				height: 11rem;
+				border-radius: 0 0 .3rem .3rem;
+			}
+			.jisuan {
+				font-size: 0.35rem;
+				line-height: 0.49rem;
+				letter-spacing: 0.01rem;
+				color: #875605;
+				font-weight: bold;
+				margin-bottom: .6rem;
+			}
+			.X {
+				display: block;
+				width: 1.2rem;
+				height: 1.2rem;
+				margin: 0 auto;
+				margin-top: 0.4rem;
+			}
+			.popup {
+				width: 10rem;
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				z-index: 20;
+				background: rgba(0, 0, 0, 0.7);
+				padding: 0 0.32rem;
+				text-align: center;
+				display: none;
+			}
+			.popup .pop-main {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				margin-top: -1rem;
+			}
+			.popup .popup-content {
+				width: 9.36rem;
+				height: 8.08rem;
+				padding-top: 2.83rem;
+				background-color: #ffffff;
+				border-radius: 0.27rem 0.27rem 0 0;
+				text-align: center;
+				background-image: url(images/invitation/twbj.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				background-position: center;
+				position: relative;
+			}
+			.popup .popup-content p {
+				font-size: 0.56rem;
+				color: #875605;
+				line-height: 1.3rem;
+			}
+			.popup .popup-content p:nth-child(3){
+				font-size: 0.72rem;
+				color: #875605;
+				margin-top: 1rem;
+			}
+			.popup .popup-content .but2 {
+				width: 9.36rem;
+				line-height: 1.32rem;
+				background-image: linear-gradient(0deg, 
+					#ffaa26 0%, 
+					#ffab27 7%, 
+					#feb640 52%, 
+					#ffc054 65%, 
+					#feda8a 100%), 
+				linear-gradient(
+					#f6f7a4, 
+					#f6f7a4);
+				background-blend-mode: normal, 
+					normal;
+				border-radius: 0.67rem 0.67rem 0rem 0rem;
+				font-size: 0.56rem;
+				color: #bc3d16;
+				position: absolute;
+				bottom: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="inviContainer">
+			<div class="guiwrap">
+				<img class="guize" src="images/invitation/guize.png" />
+			</div>
+			<img class="tit" src="images/invitation/ybanenr.png" />
+			<div class="jiang1">
+				<div class="cai1">奖励一</div>
+				<img style="width: 6.72rem;margin-top: 1rem;" src="images/invitation/ytit1.png" />
+				<p>
+					受邀好友注册<span>14</span>日内，投资时长超过<span>10</span>天，您即可获取相应现金分红！每月最多可获得<span>10</span>位好友带来的奖励，最高可拿<span>5000元</span>
+				</p>
+				<img style="width: 8.64rem;" src="images/invitation/biao.png" />
+			</div>
+			<div class="jiang2">
+				<div class="cai1">奖励二</div>
+				<img style="width: 7.21rem;margin-top: 1.03rem;" src="images/invitation/gtit2.png" />
+				<p>每日佣金=好友总待收本金*佣金利率/365</p>
+				<div class="cha">查看我的佣金</div>
+			</div>
+			<div class="jiang3">
+				<img style="width: 4.48rem;margin: 0.41rem 0;" src="images/invitation/ytit3.png" /><br />
+				<span>受邀人<br />待收货币区间</span>
+				<span class="span2">一级合伙人<br />佣金利率</span>
+				<span>二级合伙人<br />佣金利率</span>
+				<div class="shuju" style="margin-top: .23rem;">
+					<span>待收≥0.1BTC/0.5ETH</span>
+					<span>0.5</span>
+					<span>0.25</span>
+				</div>
+				<div class="shuju" style="background: #FFFFFF;">
+					<span>待收≥1BTC/10ETH</span>
+					<span>0.8</span>
+					<span>0.4</span>
+				</div>
+				<div class="shuju">
+					<span>待收≥2BTC/20ETH</span>
+					<span>1</span>
+					<span>0.5</span>
+				</div>
+				<div class="shuju" style="background: #FFFFFF;">
+					<span>待收≥5BTC/50ETH</span>
+					<span>1.5</span>
+					<span>0.75</span>
+				</div>
+				<div class="ming">
+					佣金一直持续到您的好友退出计划为止，每日结算，可在【我的】账户中进行查看
+				</div>
+				<div class="lizi">
+					<img style="width: 7.9rem;margin: 0.2rem 0;" src="images/invitation/li.png" />
+					<p>
+						例如，我邀请一级合伙人账户待收本金共1个BTC，一级合伙人又邀请二级合伙人账户待收本金共2BTC，则我可获取当日现金返现：1BTC（受邀请人投资当日市值）*0.8%/365+2BTC（受邀请人投资当日市值）*0.5%/365*。
+					</p>
+				</div>
+				<img style="width: 6.41rem;margin: 0.5rem 0;" src="images/invitation/ytit2.png" /><br />
+				<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=f69b29f140a3b296e940ef323ad791864019d5a730de2f2535c135d048fc52f5">
+					<img style="width: 2.73rem;" src="images/invitation/qq.png" />
+				</a>
+				<img style="width: 2.73rem;margin-left: 1.84rem;" src="images/invitation/Telegram.png" class="btn" />
+				<input type="hidden" id="dian" value="https://t.me/imbgo" />
+			</div>
+			<div class="wen">
+				温馨提示
+			</div>
+			<div class="wencont">
+				<span class="dian"></span><span>待收本金为币果理财账户内投资项目的总待收本金金额；</span><br />
+				<span class="dian"></span><span>每日佣金会跟随您邀请的合伙人总数以及合伙人总待收本金决定；</span><br />
+				<span class="dian"></span><span>佣金每日0:00后统一发放前一日佣金，您可在【我的】账户中进行查看。</span>
+			</div>
+			<div class="but">
+				立即邀请好友
+			</div>
+			<!-- 规则弹层 -->
+			<div class="guizePopup">
+				<div class="popup-content">
+						<div class="tjiang1">
+							<div class="ttit1">
+								奖励一
+							</div>
+							<img style="width: 6.72rem;margin: .85rem 0 .35rem 0;" src="images/invitation/gtit1.png" />
+							<div class="wencont">
+								<span class="dian"></span><span>邀请好友必须为新注册用户；</span><br />
+								<span class="dian"></span><span>受邀好友注册14日内，投资时长超过10天，您即可获取相应现金分红！每月最多可获得10位好友带来的奖励，最高可拿5000元；</span><br />
+								<span class="dian"></span><span>领取的现金奖励取受邀好友投资区间的最高值，每位好友的奖励不可叠加领取。</span>
+							</div>
+						</div>
+						<img style="width: 9.36rem;display: block;margin-top: -0.1rem;" src="images/invitation/gge.png" />
+						<div class="li2">
+							<div class="tjiang1 tjiang2">
+								<div class="ttit1">
+									奖励二
+								</div>
+								<img style="width: 7.2rem;margin: .85rem 0 .35rem 0;" src="images/invitation/gtit2.png"/>
+								<p class="jisuan">每日佣金=好友总待收本金*佣金利率/365</p>
+								<div class="wencont">
+									<span class="dian"></span><span>邀请好友必须为新注册用户；</span><br />
+									<span class="dian"></span><span>佣金一直持续到您的好友退出计划为止，每日结算，可在【我的】账户中进行查看；</span><br />
+									<span class="dian"></span><span>待收本金为币果理财账户内投资项目的总待收本金金额，不包含体验金金额；</span><br />
+									<span class="dian"></span><span>利率范围取好友代收区间的最大值，佣金每日不可反复获取；</span><br />
+									<span class="dian"></span><span>每日佣金会跟随您邀请的合伙人总数以及合伙人总待收本金决定；</span><br />
+									<span class="dian"></span><span>佣金每日0:00后统一发放前一日佣金，您可在【我的】账户中进行查看；</span><br />
+									<span class="dian"></span><span>活动期间严禁不正当手段刷奖、套取奖品等操作。若经查实，立即取消其参加活动的资格及获奖资格， 如有疑问可拨打客服热线 400-007-0627；</span><br />
+									<span class="dian"></span><span>币果理财对该活动有最终解释权。
+								</div>
+							</div>
+						</div>
+					</div>
+				<img class="X" id="X" src="images/invitation/xx.png">
+			</div>
+			<!-- 唤醒弹层 -->
+			<div class="popup">
+				<div class="pop-main">
+					<div class="popup-content">
+						<div class="state1" style="display: none;">
+							<p>您邀请的好友还未投资</p>
+							<p>快去唤醒TA吧~</p>
+							<p>你离奖金只有一步之遥了！</p>
+						</div>
+						<div class="state2" style="display: none;">
+							<p style="margin-top: 1rem;">您还未邀请好友，快去邀请吧！</p>
+							<p>丰厚奖励等你来拿哟~</p>
+						</div>
+						<div class="but2">
+							立即邀请好友
+						</div>
+					</div>
+					<img class="X" id="X2" src="images/invitation/xx.png">
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			// 规则弹层
+			$(".guize").on("click", function() {
+				$('.guizePopup').show();
+				$('html,body').animate({
+			        scrollTop: 0
+			    }, 400);  
+			})
+			$("#X").on("click", function() {
+				$('.guizePopup').hide();
+			})
+			//关闭唤醒弹层
+			$("#X2").on("click", function() {
+				$('.popup').hide();
+			})
+			
+			//获取URL参数方法
+			var test = window.location.search;
+			function GetQueryString(name) {
+				var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+				var r = window.location.search.substr(1).match(reg);
+				if(r != null) return decodeURI(r[2]);
+				return null;
+			}
+			var userId = GetQueryString("userId");
+			//查看我的佣金
+			$(".cha").on("click", function() {
+				if(userId == '' || userId == null) {
+					//唤醒原生登录
+					window.location='bb://1000##{"tologin":"1"}';
+				} else {
+					var url = "http://192.168.1.83/app/mine/isVisitFriend";
+					$.ajax({
+						url: url,
+						type: 'post',
+						dataType: 'json',
+						headers: {
+						   'userId': userId,
+						},
+						contentType: 'application/json;charset=UTF-8',
+						success: function(res) {
+							if(res.data.isVisitFriend == 0) {
+								//没有邀请过好友
+								$('.popup').show();
+								$('.state2').show();
+							} else {
+								if(res.data.isInvest == 0){
+									//邀请过好友,但好友没有投资
+									$('.popup').show();
+									$('.state1').show();
+								} else {
+									//邀请过好友,好友有投资,查看我的佣金
+									window.location.href='invitCommission.html?userId=' + userId;
+								}
+							}
+						}
+					});
+				}
+			})
+			
+			//与原生交互分享
+			$(".but").on("click", function() {
+				if(userId == '' || userId == null) {
+					//唤醒原生登录
+					window.location='bb://1000##{"tologin":"1"}';
+				} else {
+					//唤醒原生分享
+					window.location='bb://1000##{"userId":"'+ userId +'"}';
+				}
+			})
+			
+			//复制电报号
+		    var content = $("#dian").val();  
+		    var clipboard = new Clipboard('.btn', {  
+		        text: function() {
+		            return content;
+		        }
+		    });
+		    clipboard.on('success', function(e) {  
+		        alert("复制成功");  
+		    });
+		    clipboard.on('error', function(e) {
+		         alert("复制失败，请重试");
+		    });
+		</script>
+	</body>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+</html>

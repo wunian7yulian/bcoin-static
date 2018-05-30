@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="browsermode" content="application">
+		<meta name="x5-page-mode" content="app">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="keywords" content="币果理财">
+		<title>币果理财</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<script src="js/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.animate1.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				font-family: PingFangSC-Regular, sans-serif;
+				font-weight: normal;
+				font-stretch: normal;
+				letter-spacing: 0rem;
+			}
+			ul,li{ padding:0;margin:0;list-style:none}
+			.swiper-container {
+				width: 10rem;
+				height: 100%;
+			}
+			.slide1 {
+				background: url(images/website/page1/bj.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				text-align: center;
+				color: #FFFFFF;
+			}
+			.slide1 .logo {
+				width: 6.46rem;
+				margin: 1.5rem 0 1rem 0;
+			}
+			.slide1 ul {
+				width: 8.61rem;
+				height: 6rem;
+				background-color: rgba(42, 70, 119, 0.64);
+				margin: 0 auto;
+				padding: 0.001rem;
+				text-align: left;
+			}
+			.slide1 li {
+				margin: 0.5rem 0 0 0.51rem;
+			}
+			.slide1 li img{
+				width: 1.12rem;
+				vertical-align: middle;
+				margin-right: 0.45rem;
+			}
+			.slide1 li span{
+				display: inline-block;
+				font-size: 0.37rem;
+				vertical-align: middle;
+			}
+			.slide1 .shi {
+				width: 5.12rem;
+				height: 1.85rem;
+				line-height: 1.6rem;
+				background: url(images/website/page1/jian.png) no-repeat;
+				background-size: 5.12rem;
+				background-position: center;
+				text-align: center;
+				font-size: 0.37rem;
+				margin: 0.5rem auto 0.4rem auto;
+			}
+			.slide1 .but {
+				width: 8.57rem;
+				line-height: 1.2rem;
+				background-image: linear-gradient(90deg, 
+					#52a7ff 0%, 
+					#638ce9 100%), 
+				linear-gradient(
+					#ffffff, 
+					#ffffff);
+				background-blend-mode: normal, 
+					normal;
+				border-radius: 0.05rem;
+				font-size: 0.43rem;
+				margin: 0 auto;
+			}
+			.slide2 {
+				background: url(images/website/page2/bj.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				font-size: 0.4rem;
+				color: #FFFFFF;
+				text-align: center;
+			}
+			.slide2 .tit {
+				width: 8.51rem;
+				height: 2.15rem;
+				text-align: left;
+				margin: 0.2rem auto;
+			}
+			 .huotit{
+				display: inline-block;
+				font-size: 0.43rem;
+				color: #52a7ff;
+			}
+			 .huotit span {
+				display: inline-block;
+				width: 0.13rem;
+				height: 0.13rem;
+				border: solid 0.03rem #52a7ff;
+				margin-bottom: 0.05rem;
+				transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+			}
+			.slide2 .imgs img{
+				display: inline-block;
+				width: 3.14rem;
+			}
+			.slide3 {
+				/*background-color: rgb(38,62,99);*/
+			}
+			.slide3 .slide3wrap {
+				position: relative;
+			}
+			.slide3 img:nth-child(1) {
+				width: 10rem;
+				z-index: 2;
+				position: absolute;
+				top: 0;
+			}
+			.slide3 p {
+				width: 4.36rem;
+				height: 1.79rem;
+				font-family: FZLTCHJW--GB1-0,PingFangSC-Regular, sans-serif;
+				font-size: 0.49rem;
+				color: #283458;
+				position: absolute;
+				right: 0.5rem;
+				top: 1.4rem;
+				z-index: 3;
+				font-weight: bold;
+			}
+			.slide3 .img2 {
+				width: 10rem;
+				position: absolute;
+				top: 7rem;
+			}
+			.slide3 .img3 {
+				width: 10rem;
+				position: absolute;
+				top: 4.8rem;
+			}
+			.slide4 {
+				background: url(images/website/page34/bj.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				color: #FFFFFF;
+				text-align: center;
+			}
+			.slide4 .cont {
+				width: 9.28rem;
+				height: 8.95rem;
+				background-color: rgba(42, 70, 119, 0.64);
+				margin: 2rem auto 0.55rem auto;
+				text-align: center;
+				padding: 0.001rem;
+			}
+			.slide4 .cont p {
+				font-size: 0.51rem;
+				margin: 0.64rem 0 0.95rem 0;
+			}
+			.slide4 .cont .img {
+				width: 8.68rem;
+			}
+			.slide4 .geli {
+				width: 8.35rem;
+				height: 1.51rem;
+				font-size: 0.37rem;
+				text-align: left;
+				margin: 0.4rem auto 0 auto;
+			}
+			.slide5 {
+				background: url(images/website/page5/bj.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				color: #FFFFFF;
+				text-align: center;
+			}
+			.slide5 .wrap {
+				width: 100%;
+				height: 100%;
+				padding-top: 4.8rem;
+			}
+			.slide5 .imgs {
+				width: 7.12rem;
+				height: 4.85rem;
+				background: url(images/website/page5/bing.png) no-repeat;
+				background-size: 7.12rem;
+				background-position: center;
+				color: #FFFFFF;
+				margin: auto;
+			}
+			.slide5 .xian1{
+				width: 1.38rem;
+				position: absolute;
+				right: 1.6rem;
+				top: 2rem;
+			}
+			.slide5 .kuai1 {
+				width: 5.18rem;
+				position: absolute;
+				right: .55rem;
+				top: .35rem;
+			}
+			.slide5 .xian2{
+				width: 0.1rem;
+				position: absolute;
+				left: 3.33rem;
+				top: 4.3rem;
+			}
+			.slide5 .kuai2 {
+				width: 4.68rem;
+				position: absolute;
+				left: .47rem;
+				top: 2.9rem;
+			}
+			.slide5 .xian3{
+				width: 1.32rem;
+				position: absolute;
+				left: .85rem;
+				top: 6.5rem;
+			}
+			.slide5 .kuai3 {
+				width: 5.05rem;
+				position: absolute;
+				left: .4rem;
+				top: 9.95rem;
+			}
+			.slide5 .xian4{
+				width: 2.5rem;
+				position: absolute;
+				right: 1.6rem;
+				top: 8.3rem;
+			}
+			.slide5 .kuai4 {
+				width: 3.36rem;
+				position: absolute;
+				right: .27rem;
+				top: 11.45rem;
+			}
+			.slide5 .wrap .dong {
+				width: 5.97rem;
+				height: 2.28rem;
+				line-height: 1.4rem;
+				background: url(images/website/page5/bot.png) no-repeat;
+				background-size: 5.12rem;
+				background-position: center;
+				font-size: 0.43rem;
+				position: absolute;
+				left: 2.01rem;
+				bottom: 1.2rem;
+			}
+			.slide6 {
+				background: url(images/website/page6/bj.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				color: #FFFFFF;
+				text-align: center;
+			}
+			.slide6 .tit {
+				width: 5.45rem;
+				margin: 1.7rem 0 0 0;
+			}
+			.slide6 .cont {
+				width: 8.61rem;
+				height: 2.61rem;
+				margin: auto;
+				background: url(images/website/page6/bluesm.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				text-align: left;
+			}
+			.slide6 .cont .hong {
+				width: 2.12rem;
+				margin: 0.4rem auto auto 0.9rem;
+				vertical-align: middle;
+			}
+			.slide6 .cont .song {
+				display: inline-block;
+				width: 3.53rem;
+				height: 1.2rem;
+				font-size: 0.45rem;
+				vertical-align: middle;
+				margin-left: 0.4rem;
+			}
+			.slide6 .content {
+				width: 8.61rem;
+				height: 5.23rem;
+				margin: 1.5rem auto 0.6rem auto;
+				background: url(images/website/page6/bluebig.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+			}
+			.slide6 .content .cheng {
+				display: inline-block;
+				font-size: 0.4rem;
+				margin: .5rem auto .42rem auto;
+			}
+			.slide6 .content .icon1,.icon3 {
+				width: 2.21rem;
+				vertical-align: middle;
+			}
+			.slide6 .content .icon2 {
+				width: 0.26rem;
+				vertical-align: middle;
+				margin: auto .85rem;
+			}
+			.slide6 .xia {
+				display: inline-block;
+				width: 8.57rem;
+				line-height: 1.2rem;
+				background-image: linear-gradient(90deg, 
+					#52a7ff 0%, 
+					#638ce9 100%), 
+				linear-gradient(
+					#ffffff, 
+					#ffffff);
+				background-blend-mode: normal, 
+					normal;
+				border-radius: 0.05rem;
+				font-size: 0.43rem;
+				text-decoration: none;
+				color: #FFFFFF;
+			}
+			.slide7 {
+				background: url(images/website/page6/bj7.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				color: #FFFFFF;
+				text-align: center;
+			}
+			.slide7 .logo7 {
+				width: 3.61rem;
+				margin: 1.03rem auto .8rem auto;
+			}
+			.slide7 .cont {
+				width: 8rem;
+				height: 7rem;
+				padding: 0 .37rem;
+				background-color: rgba(42, 70, 119, 0.64);
+				margin: auto;
+			}
+			.slide7 .cont .tit7 {
+				width: 4.25rem;
+				margin: 0.75rem auto .55rem auto;
+			}
+			.slide7 .cont p {
+				text-align: left;
+				font-size: 0.37rem;
+				margin-bottom: 0.49rem;
+			}
+			.slide7 .cont p a {
+				color: #FFFFFF;
+			}
+			.slide7 .biao {
+				width: 6.36rem;
+				line-height: 0.95rem;
+				background-color: #213a63;
+				font-size: 0.43rem;
+				margin: .8rem auto auto auto;
+			}
+			.slide8 {
+				background: url(images/website/page6/bj8.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				color: #FFFFFF;
+				text-align: center;
+			}
+			.slide8 p{
+				font-size: 0.51rem;
+				margin: 1.5rem auto 1.2rem auto;
+			}
+			.slide8 img{
+				width: 4.28rem;
+			}
+			.slide8 span {
+				display: inline-block;
+				padding: 0.15rem 0.48rem;
+				background-image: linear-gradient(90deg, 
+					#9a9ef2 0%, 
+					#75acec 100%), 
+				linear-gradient(
+					#55a2fb, 
+					#55a2fb);
+				background-blend-mode: normal, 
+					normal;
+				border-radius: 0.05rem;
+				font-size: 0.43rem;
+				margin-top: 1.5rem;
+			}
+			.slide8 .span1 {
+				margin-left: 0.3rem;
+			}
+			.slide8 .span2 {
+				margin-left: 0.6rem;
+			}
+			#icon {
+				width: 100%;
+           		text-align: center;  
+           		margin: 0.25rem auto;
+			}
+			#icon img {
+				width: 0.49rem;
+				z-index: 100;
+				margin: 0 auto;
+				position:fixed;
+				left:0;
+				right:0; 
+				bottom:0.5rem;
+				display: inline-block; 
+				animation: myfirst 1s infinite;
+			}
+	       @keyframes myfirst {  
+	           0% {  
+	               transform: translate(0px, 0px);  
+	           } 
+	           50% {  
+	               transform: translate(0px, -10px);
+	           }
+	           100% {  
+	               transform: translate(0px, 0px);
+	           }
+	       }
+		</style>
+	</head>
+
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide slide1">
+					<img src="images/website/page1/logo.png" class="logo ani" swiper-animate-effect="fadeInDown" />
+					<ul>
+						<li>
+							<img src="images/website/page1/icon1.png" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.2s"/>
+							<span class="ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.2s">数字货币再增值，年回报率10%</span>
+						</li>
+						<li>
+							<img src="images/website/page1/icon2.png" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.2s"/>
+							<span class="ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.2s">保本保息，随存随取，零手续费交易</span>
+						</li>
+						<li>
+							<img src="images/website/page1/icon3.png" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.2s"/>
+							<span class="ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.2s">BitMEX加密货币存管，保障资金安全</span>
+						</li>
+					</ul>
+					<div class="shi ani" swiper-animate-effect="fadeInDown" swiper-animate-delay="0.4s">
+						币果理财时代
+					</div>
+					<div class="but ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.4s">
+						即将开启
+					</div>
+				</div>
+				<div class="swiper-slide slide2">
+					<div style="width: 100%;height: 100%;margin: auto;">
+						<p class="tit ani" swiper-animate-effect="fadeInDown">
+							币果科技（BGO）成立于2017年，致力于为加密货币价值投资者和缺乏加密货币投资经验的用户提供安全的投资、稳定的收益，让每一位用户获得区块链红利。
+						</p>
+						<img style="width: 9.28rem;" src="images/website/page2/cont.png" class="ani" swiper-animate-effect="fadeInRight"  swiper-animate-delay="0.2s"/>
+						<p class="huotit ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.4s"><span></span> &nbsp;合作伙伴&nbsp; <span></span></p>
+						<div class="imgs">
+							<img src="images/website/page2/huo1.png" class="ani" swiper-animate-effect="fadeInLeft"  swiper-animate-delay="0.4s"/>
+							<img src="images/website/page2/huo2.png" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.4s"/>
+							<img src="images/website/page2/huo3.png" class="ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.4s"/>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide slide3">
+					<div class="slide3wrap">
+						<img src="images/website/page34/top.png" class="ani" swiper-animate-effect="fadeInLeft"/>
+						<p class="ani" swiper-animate-effect="fadeInDown" swiper-animate-delay="0.2s">
+							多种产品，灵活选择保本保息，随存随取零手续费交易
+						</p>
+						<!--<img src="images/website/page34/bot.png" class="img2 ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.6s"/>-->
+						<img src="images/website/page34/cont.png" class="img3 ani" swiper-animate-effect="fadeInRight" />
+					</div>
+				</div>
+				<div class="swiper-slide slide4">
+					<div class="cont">
+						<p class="ani" swiper-animate-effect="fadeInDown">
+							BitMEX数字货币存管流向图
+						</p>
+						<img src="images/website/page34/liu.png" class="img ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.2s"/>
+					</div>
+					<p class="huotit ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.4s"><span></span> &nbsp;实现资金隔离&nbsp; <span></span></p>
+					<p class="geli ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.4s">
+						为每位投资者开通独立BitMEX子账户，实现投资者所投数字货币与平台有效隔离，避免资金被挪用的风险，最大程度保障用户资金安全。
+					</p>
+				</div>
+				<div class="swiper-slide slide5">
+					<div class="wrap">
+						<div class="imgs ani" swiper-animate-effect="fadeIn">
+							<img src="images/website/page5/kuai1.png" class="kuai1 ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.1s" />
+							<img src="images/website/page5/xian1.png" class="xian1 ani" swiper-animate-effect="fadeInRight" />
+							<img src="images/website/page5/kuai2.png" class="kuai2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.3s" />
+							<img src="images/website/page5/xian2.png" class="xian2 ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.2s" />
+							<img src="images/website/page5/kuai3.png" class="kuai3 ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.5s" />
+							<img src="images/website/page5/xian3.png" class="xian3 ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.4s" />
+							<img src="images/website/page5/kuai4.png" class="kuai4 ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.7s"  />
+							<img src="images/website/page5/xian4.png" class="xian4 ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.6s"  />
+							<div class="dong ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.8s" >让你的币动起来</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide slide6">
+					<img src="images/website/page6/tit.png" class="tit ani" swiper-animate-effect="fadeInDown" />
+					<div class="content ani" swiper-animate-effect="fadeIn">
+						<p class="cheng ani" swiper-animate-effect="fadeInDown"  swiper-animate-delay="0.1s">
+							注册领取<br />5BTC+45ETH体验金及加息券
+						</p>
+						<p>
+							<img src="images/website/page6/icon1.png" class="icon1 ani" swiper-animate-effect="fadeInLeft"  swiper-animate-delay="0.2s"/>
+							<img src="images/website/page6/icon2.png" class="icon2 ani" swiper-animate-effect="fadeInUp"  swiper-animate-delay="0.2s"/>
+							<img src="images/website/page6/icon3.png" class="icon3 ani" swiper-animate-effect="fadeInRight"  swiper-animate-delay="0.2s"/>
+						</p>
+					</div>
+					<div class="cont ani" swiper-animate-effect="fadeIn" swiper-animate-delay="0.3s">
+						<img src="images/website/page6/hong.png" class="hong ani" swiper-animate-effect="fadeInLeft"  swiper-animate-delay="0.4s"/>
+						<p class="song ani" swiper-animate-effect="fadeInRight"  swiper-animate-delay="0.4s">
+							新手购买<br />享2%钜惠加息
+						</p>
+					</div>
+					<!--<a href="javascript:void(0)" onclick="downApp()" class="xia ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.6s">立即下载</a>-->
+				</div>
+				<div class="swiper-slide slide7">
+					<div style="width: 100%;height: 100%;margin: auto;">
+						<img src="images/website/page6/logo7.png" class="logo7 ani" swiper-animate-effect="fadeInDown"/>
+						<div class="cont">
+							<img src="images/website/page6/tit7.png" class="tit7 ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.2s"/>
+							<p class="ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.3s">QQ群：636566307</p>
+							<p class="ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.4s">客服微信：suhe1024</p>
+							<p class="ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.5s">客服电话：<a href="tel:400-007-0627">400-007-0627</a></p>
+							<p class="ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.6s">加入电报：<a href="https://t.me/imbgo">https://t.me/imbgo</a></p>
+							<p class="ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.7s">公司地址：北京市海淀区五道口优盛大厦D座701</p>
+						</div>
+						<div class="biao ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.7s">
+							币果理财，数字货币理财专家
+						</div>
+					</div>
+				</div>
+				<!--<div class="swiper-slide slide8">
+					<div style="width: 100%;height: 100%;margin: auto;">
+						<p>币果理财APP下载</p>
+						<img src="images/website/page6/cont8.png"/><br />
+						<span class="span1">IOS版下载</span>
+						<span class="span2">Android版下载</span>
+					</div>
+				</div>-->
+			</div>
+			<div id="icon">
+				<img src="images/website/page1/di.png"/>
+			</div>
+		</div>
+		<script language="javascript">
+			var mySwiper = new Swiper('.swiper-container', {
+				direction: "vertical",
+				onSlideChangeStart: function(swiper) {
+					if(swiper.activeIndex == 6){
+					 	$("#icon").css('display','none'); 
+					 } else {
+					 	$("#icon").css('display','block'); 
+					}
+				},
+				onInit: function(swiper){ 
+			    		swiperAnimateCache(swiper); 
+			    		swiperAnimate(swiper);
+			    },
+			    onSlideChangeEnd: function(swiper){ 
+			    		swiperAnimate(swiper);
+			    },
+			})
+			$('.slide1 .but').click(function(){
+				mySwiper.slideTo(1, 1000, true);
+			})
+		</script>
+	</body>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+
+</html>

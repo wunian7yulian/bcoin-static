@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="browsermode" content="application">
+		<meta name="x5-page-mode" content="app">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="keywords" content="币果理财">
+		<title>币果理财注册</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				font-family: PingFangSC-Regular, sans-serif;
+				font-weight: normal;
+				font-stretch: normal;
+				letter-spacing: 0rem;
+				background-color: rgb(245,244,244);
+			}
+			
+			.regContainer {
+				margin: 0 auto;
+				width: 10rem;
+				height: auto;
+				padding-bottom: 0.77rem;
+				background: url(images/registered/registeredBG.jpg) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				padding-top: 0.001rem;
+			}
+			
+			.regContainer .tit {
+				width: 7.85rem;
+				height: 3.67rem;
+				background-color: #e35246;
+				margin: 0.96rem auto 0.43rem auto;
+				padding-top: 0.13rem;
+			}
+			
+			.regContainer .tit .spanwrap {
+				width: 7.48rem;
+				height: 2.68rem;
+				border: dashed 0.03rem #ffd6ca;
+				margin: 0 auto;
+				text-align: center;
+				padding-top: .8rem;
+			}
+			
+			.regContainer .tit .spanwrap p {
+				display: inline-block;
+				font-size: 0.68rem;
+				color: #ffffff;
+			}
+			
+			.regContainer .tit .spanwrap span {
+				display: inline-block;
+				width: 0.15rem;
+				height: 0.15rem;
+				margin-bottom: 0.07rem;
+				border: solid 0.04rem #ffffff;
+				transform: rotate(45deg);
+				-ms-transform: rotate(45deg);
+				-moz-transform: rotate(45deg);
+				-webkit-transform: rotate(45deg);
+				-o-transform: rotate(45deg);
+			}
+			
+			.regContainer .lihe {
+				width: 7.786rem;
+				height: 2.213rem;
+				display: block;
+				margin: 0 auto;
+			}
+			
+			.regContainer .cont {
+				width: 7.87rem;
+				height: 4.25rem;
+				background-color: #ffffff;
+				border-radius: 0.05rem;
+				margin: 0 auto;
+				padding: 0.69rem 0.48rem;
+				position: relative;
+			}
+			
+			input,
+			button {
+				border: none;
+				outline: none;
+				-webkit-appearance: none;
+				box-shadow: none;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+				-webkit-appearance: none;
+			}
+			
+			.regContainer .cont input {
+				width: 6.65rem;
+				line-height: 1.07rem;
+				border-radius: 0.53rem;
+				border: solid 0.03rem #f04944;
+				margin-bottom: 0.39rem;
+				padding: 0 0.61rem;
+				font-size: 0.37rem;
+			}
+			
+			.chkBtn {
+				width: 2.4rem;
+				height: 0.96rem;
+				background-color: #e35246;
+				border-radius: 0.48rem;
+				position: absolute;
+				top: 2.275rem;
+				right: 0.5rem;
+				font-size: 0.37rem;
+				color: #fff;
+			}
+			
+			.btn-next {
+				width: 7.85rem;
+				height: 1.07rem;
+				background-color: #d84e43;
+				border-radius: 0.53rem;
+				font-size: 0.43rem;
+				color: #fff;
+			}
+			
+			.regContainer .bottom {
+				margin-top: 0.65rem;
+				text-align: center;
+			}
+			
+			.regContainer .bottom p {
+				margin-bottom: .15rem;
+				color: #d84e43;
+				font-size: 0.51rem;
+			}
+		</style>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="regContainer">
+			<div class="tit">
+				<div class="spanwrap">
+					<p><span></span> 币果理财 <span></span></p>
+					<p style="font-size: 0.52rem;">数字货币理财专家</p>
+				</div>
+			</div>
+			<img class="lihe" src="images/registered/lihe.png" />
+			<div class="cont">
+				<input type="text" name="mobile" placeholder="输入手机号" id="phoneNum" maxlength="11" />
+				<input type="text" name="captcha" placeholder="输入验证码" id="checkNum" maxlength="6" />
+				<button type="button" class="chkBtn" id="btnSendCode">获取验证码</button>
+				<button type="button" class="btn-next" id="subBtn">立即参与</button>
+			</div>
+			<div class="bottom">
+				<p>- 新人福利 -</p>
+				<p style="font-size: 0.43rem;">注册壕送5BTC+45ETH见面礼</p>
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onload = function() {
+				var phoneCheck = /^1[34578]\d{9}$/; //电话号正则表达式
+				var InterValObj; //timer变量，控制时间
+				var count = 60; //间隔函数，1秒执行
+				var curCount; //当前剩余秒数
+				var codeUrl = '';
+				
+				//电话号正则方法
+				function checkPhone(obj) {
+					var thisVal = $(obj).val();
+					if(phoneCheck.test(thisVal)) {
+						return true;
+					} else {
+						return false;
+					}
+				};
+				$("#btnSendCode").click(function() {
+					if(checkPhone($("#phoneNum"))) {
+//						sendMessage();
+						smsCodeApplyWeb();
+					} else {
+						alert('请填入正确的手机号');
+					}
+				});
+				function smsCodeApplyWeb() {
+					var mobile = $("#phoneNum").val();
+					var param = {
+						"type": 2,
+						"mobile": mobile
+					};
+					var formData = JSON.stringify(param);
+					var url = "http://192.168.1.83/app/user/sendSms";
+					$.ajax({
+						url: url,
+						type: 'post',
+						dataType: 'json',
+						contentType: 'application/json;charset=UTF-8',
+						data: formData,
+						success: function(res) {
+							//console.log(res);
+							if(res.message.code == 200) {
+								sendMessage();
+							} else {
+								alert(res.message.msg);
+							}
+						}
+					});
+				};
+				//发送验证码
+				function sendMessage() {
+					var dealType; //验证方式
+					var mobile = $("#phoneNum").val(); //电话号
+					var dataString = "";
+					curCount = count;
+					dataString = '&mobile=' + mobile;
+					//设置button效果，开始计时
+					$("#btnSendCode").attr("disabled", "true");
+					$("#btnSendCode").html(+curCount + "秒再获取");
+					InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
+					//向后台发送处理数据
+					/*$.getJSON(codeUrl+dataString,function(data){
+					 dealType=data.  (为验证码赋值)
+					 });*/
+				};
+				//timer处理函数
+				function SetRemainTime() {
+					if(curCount == 0) {
+						window.clearInterval(InterValObj); //停止计时器
+						$("#btnSendCode").removeAttr("disabled"); //启用按钮
+						$("#btnSendCode").html("重新发送");
+						code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效
+					} else {
+						curCount--;
+						$("#btnSendCode").html(+curCount + "秒再获取");
+					}
+				};
+				
+				//获取URL参数方法
+				var test = window.location.search;
+				function GetQueryString(name) {
+					var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+					var r = window.location.search.substr(1).match(reg);
+					if(r != null) return decodeURI(r[2]);
+					return null;
+				}
+				var invitMobile;
+				if (GetQueryString("invitMobile") == null){
+					invitMobile = "";
+				} else {
+					invitMobile = GetQueryString("invitMobile");
+				}
+				//提交按钮
+				$("#subBtn").click(function(){
+					if($("#checkNum").val() == "") {
+						alert("请输入短信验证码");
+					} else {
+						var mobile = $("#phoneNum").val();
+						var smsCode = $("#checkNum").val();
+						var param = {
+							"mobile": mobile,
+							"smsCode": smsCode,
+                            "password":"",
+                            "invitMobile": invitMobile
+						};
+						var formData = JSON.stringify(param);
+						var url = "http://192.168.1.83/app/user/register";
+						$.ajax({
+							url: url,
+							type: 'post',
+							dataType: 'json',
+							contentType: 'application/json;charset=UTF-8',
+							data: formData,
+							success: function(res) {
+								if(res.message.code == 200) {
+									//注册成功
+									window.location.href='install.html?code=' + res.message.code;
+								} else if(res.message.code == 410) {
+									//410已注册过
+									window.location.href='install.html?code=' + res.message.code;
+								} else {
+									alert(res.message.msg);
+								}
+							}
+						});
+					}
+				})
+			};
+		</script>
+	</body>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+</html>

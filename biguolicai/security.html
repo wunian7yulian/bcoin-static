@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="browsermode" content="application">
+		<meta name="x5-page-mode" content="app">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="keywords" content="币果理财">
+		<title>安全保障</title>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<script src="js/swiper-3.4.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.animate1.0.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				font-family: PingFangSC-Regular, sans-serif;
+				font-weight: normal;
+				font-stretch: normal;
+				letter-spacing: 0rem;
+			}
+			ul,li{ padding:0;margin:0;list-style:none}
+			.ani{
+			   transition-timing-function: linear;
+			   -webkit-transition-timing-function: linear;
+			}
+			/*security.html*/
+			.swiper-container {
+				width: 10rem;
+				height: 100%;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.slide1 .top {
+				width: 10rem;
+				height: 8.17rem;
+				background: url(images/security/page1/bj.png) no-repeat;
+				background-size: 10rem;
+				color: #FFFFFF;
+			}
+			.slide1 .top img {
+				width: 6.44rem;
+				margin-top: 4.73rem;
+			}
+			.slide1 .top p {
+				background: url(images/security/page1/kuang.png) no-repeat;
+				background-size: 4.52rem;
+				width: 4.52rem;
+				height: 0.75rem;
+				line-height: .85rem;
+				font-size: 0.38rem;
+				letter-spacing: 0.04rem;
+				margin: 0.2rem auto 0 auto;
+			}
+			.slide1 .cont {
+				width: 10rem;
+				margin-top: 0.79rem;
+			}
+			.tops {
+				width: 10rem;
+				height: 3.81rem;
+				background: url(images/security/page2/bj.png) no-repeat;
+				background-size: 100%;
+				color: #ffffff;
+				position: relative;
+			}
+			.tops .topimg {
+				width: 1.48rem;
+				margin: 0.09rem 0 0 0;
+			}
+			.tops .p1 {
+				font-family: HYk1gj,PingFangSC-Regular, sans-serif;
+				font-size: 0.7rem;
+				font-weight: bold;
+				position: absolute;
+				top: 1.3rem;
+				left: 0; bottom: 0; right: 0; 
+			}
+			.tops .p2 {
+				font-size: 0.43rem;
+				margin-top: .35rem;
+			}
+			.slide2 .wen {
+				width: 7.99rem;
+				height: 1.41rem;
+				font-size: 0.37rem;
+				line-height: 0.52rem;
+				color: #666666;
+				text-align: left;
+				margin: 0.43rem auto 0.71rem auto;
+			}
+			.slide2 img {
+				width: 8.52rem;
+				margin-bottom: 0.37rem;
+			}
+			.slide3 .cont {
+				width: 8.68rem;
+				margin: 0.81rem 0 0.97rem 0;
+			}
+			.slide3 .wrap {
+				width: 7.25rem;
+				height: 2.79rem;
+				margin: 0 auto;
+				text-align: left;
+				font-size: 0.43rem;
+				color: #2b69bf;
+			}
+			.slide3 .wrap p {
+				margin-bottom: 0.24rem;
+			}
+			.slide3 .wrap img {
+				width: 0.77rem;
+				margin-right: .2rem;
+				vertical-align: middle;
+			}
+			.slide3 .wrap span {
+				display: inline-block;
+			}
+			.slide4 .tops span {
+				display: inline-block;
+				margin-top: .3rem;
+				padding: .01rem .1rem;
+				font-size: 0.32rem;
+				border: solid 0.03rem #ffffff;
+			}
+			.slide4 .tops span:nth-child(2) {
+				margin: 0 .2rem;
+			}
+			.slide4 .cont {
+				width: 7.4rem;
+				height: 0.83rem;
+				font-size: 0.37rem;
+				line-height: 0.45rem;
+				color: #666666;
+				text-align: left;
+				margin: .45rem auto .75rem auto;
+			}
+			.slide4 .si {
+				width: 6.3rem;
+				margin: 0 0 .83rem 0;
+			}
+			.slide4 .pwrap {
+				width: 8.61rem;
+				height: 3.67rem;
+				border-radius: 0.07rem;
+				margin: 0 auto;
+				box-shadow: 0rem 0.03rem 0.53rem 0rem 
+					rgba(35, 73, 123, 0.11);
+			}
+			.slide4 .pwrap div {
+				float: left;
+				font-size: 0.37rem;
+			}
+			.slide4 .pwrap div:nth-child(1) {
+				width: 2.25rem;
+				height: 3.2rem;
+				padding-top: 0.45rem;
+				background-color: #397fe1;
+				color: #FFFFFF;
+				border-radius: 0.07rem 0rem 0rem 0.07rem;
+			}
+			.slide4 .pwrap div:nth-child(2) {
+				border-left: none;
+				padding: 0.41rem 0.45rem;
+				color: #666666;
+				text-align: left;
+				border-radius:  0rem 0.07rem 0.07rem 0rem;
+			}
+			i {
+				display: inline-block;
+				width: 0.13rem;
+				height: 0.13rem;
+				background-color: #397fe1;
+				border-radius: 100%;
+				margin-bottom: .06rem;
+			}
+			.slide4 .pwrap div:nth-child(2) span {
+				display: inline-block;
+				width: 5rem;
+				padding-left: 0.1rem;
+				vertical-align: top;
+			}
+			.slide5 .cont {
+				width: 8.19rem;
+				height: 1.4rem;
+				font-size: 0.37rem;
+				line-height: 0.51rem;
+				color: #666666;
+				text-align: left;
+				margin: .63rem auto .96rem auto;
+			}
+			.slide5 .contimg {
+				width: 9.39rem;
+				height: 6.99rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.05rem 0.17rem 0rem 
+					rgba(25, 79, 171, 0.18);
+				margin: 0 auto;
+			}
+			.slide5 .contimg img {
+				width: 9.17rem;
+			}
+			.slide6 .cont {
+				width: 7.96rem;
+				height: 2.4rem;
+				font-size: 0.37rem;
+				line-height: 0.51rem;
+				color: #666666;
+				margin: .53rem  auto .57rem auto;
+				text-align: left;
+			}
+			.slide6 .contimg {
+				width: 9.36rem;
+				height: 7.13rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.05rem 0.17rem 0rem 
+					rgba(25, 79, 171, 0.18);
+				margin: 0 auto;
+			}
+			.slide6 .contimg .img1 {
+				width: 2.78rem;
+				float: right;
+				margin: .21rem .25rem 0 0;
+			}
+			.slide6 .contimg .img2 {
+				width: 6.36rem;
+				margin: .2rem 0 0 1rem;
+			}
+			.slide7 .cont {
+				width: 8.19rem;
+				height: 1.89rem;
+				font-size: 0.37rem;
+				line-height: 0.51rem;
+				color: #666666;
+				text-align: left;
+				margin: .67rem  auto .39rem auto;
+			}
+			.slide7 .liu {
+				width: 7.75rem;
+				height: 7.61rem;
+				margin: 0 auto;
+				position: relative;
+			}
+			.slide7 .liu .icon {
+				width: 6.61rem;
+				position: absolute;
+				top: .61rem;
+				left: .65rem;
+			}
+			.slide7 .liu .icon0 {
+				width: 2.61rem;
+				position: absolute;
+				top: 2.39rem;
+				left: 2.67rem;
+			}
+			.slide7 .liu .icon1 {
+				width: 1.84rem;
+				position: absolute;
+				top: 0rem;
+				left: 2.67rem;
+			}
+			.slide7 .liu .icon2 {
+				width: 1.61rem;
+				position: absolute;
+				top: 1.8rem;
+				right: 0;
+			}
+			.slide7 .liu .icon3 {
+				width: 1.61rem;
+				position: absolute;
+				top: 4.77rem;
+				right: 1.13rem;
+			}
+			.slide7 .liu .icon4 {
+				width: 1.24rem;
+				position: absolute;
+				bottom: 0;
+				left: 2.67rem;
+			}
+			.slide7 .liu .icon5 {
+				width: 1.82rem;
+				position: absolute;
+				bottom: 1.7rem;
+				left: 0;
+			}
+			.slide7 .liu .icon6 {
+				width: 1.22rem;
+				position: absolute;
+				top: 1.69rem;
+				left: .88rem;
+			}
+			.slide8 .cont {
+				width: 8.2rem;
+				height: 1.39rem;
+				font-size: 0.37rem;
+				line-height: 0.51rem;
+				color: #666666;
+				text-align: left;
+				margin: .75rem auto .8rem auto;
+			}
+			.slide8 .content {
+				width: 8.08rem;
+				height: 5.99rem;
+				margin: 0 auto;
+				position: relative;
+			}
+			.slide8 .content p {
+				width: 3.53rem;
+				height: 1.19rem;
+				padding-top: 0.3rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.05rem 0.17rem 0rem 
+					rgba(42, 80, 165, 0.18);
+				border-radius: 0.07rem;
+				font-size: 0.32rem;
+				color: #666666;
+			}
+			.slide8 .content .p1 {
+				background-image:url(images/security/page8/icon1.png) ;
+				background-repeat: no-repeat;
+				background-size: 0.66rem;
+				background-position: 0.4rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.slide8 .content .p1 span,.slide8 .content .p2 span {
+				margin-left: .7rem;
+			}
+			.slide8 .content .p2 {
+				background-image:url(images/security/page8/icon2.png) ;
+				background-repeat: no-repeat;
+				background-size: 0.66rem;
+				background-position: 0.4rem;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+			.slide8 .content .xian {
+				width: 0.02rem;
+				height: 0.56rem;
+				position: absolute;
+				top: 1.49rem;
+				left: 1.33rem;
+			}
+			.slide8 .content .xian0 {
+				width: 0.02rem;
+				height: 0.56rem;
+				position: absolute;
+				top: 1.49rem;
+				right: 1.33rem;
+			}
+			.slide8 .content .p3 {
+				position: absolute;
+				top: 2.05rem;
+				left: 0;
+			}
+			.slide8 .content .p4 {
+				position: absolute;
+				top: 2.05rem;
+				right: 0;
+			}
+			.slide8 .content .xian1 {
+				width: 0.9rem;
+				height: 1.6rem;
+				position: absolute;
+				top: 3.58rem;
+				left: 1.33rem;
+			}
+			.slide8 .content .xian2 {
+				width: 0.9rem;
+				height: 1.6rem;
+				position: absolute;
+				top: 3.58rem;
+				right: 1.33rem;
+			}
+			.slide8 .content .p5 {
+				background-image:url(images/security/page8/icon3.png) ;
+				background-repeat: no-repeat;
+				background-size: 0.66rem;
+				background-position: 0.4rem;
+				position: absolute;
+				left: 2.28rem;
+				bottom: 0.2rem;
+			}
+			.slide8 .content .p5 span {
+				display: inline-block;
+				padding: .2rem 0 0 .6rem;
+			}
+			.slide9 span img{
+				width: 6.86rem;
+				height: 2.82rem;
+				margin-top: .06rem;
+			}
+			.slide9 .huo {
+				font-size: 0.4rem;
+				margin: .1rem 0 0.2rem 0;
+				color: #397fe1;
+			}
+			.slide9 .imgs img{
+				width: 2.72rem;
+			}
+			#icon {
+				width: 100%;
+           		text-align: center;  
+           		margin: 0.25rem auto;
+			}
+			#icon img {
+				width: 0.49rem;
+				z-index: 100;
+				margin: 0 auto;
+				position:fixed;
+				left:0;
+				right:0; 
+				bottom:0.5rem;
+				display: inline-block; 
+				animation: myfirst 1s infinite;
+			}
+	       @keyframes myfirst {  
+	           0% {  
+	               transform: translate(0px, 0px);  
+	           } 
+	           50% {  
+	               transform: translate(0px, -10px);
+	           }
+	           100% {  
+	               transform: translate(0px, 0px);
+	           }
+	       }
+		</style>
+	</head>
+
+	<body>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide slide1" >
+					<div class="top">
+						<img src="images/security/page1/tit.png" class="ani" swiper-animate-effect="fadeInLeft"/>
+						<p class="ani" swiper-animate-effect="fadeInRight">为您的资产保驾护航&nbsp;</p>
+					</div>
+					<img src="images/security/page1/cont.png" class="cont ani" swiper-animate-effect="fadeIn"/>
+				</div>
+				<div class="swiper-slide slide2" >
+					<div class="tops">
+						<img src="images/security/page2/tit.png" class="topimg ani" swiper-animate-effect="fadeInDown"/>
+						<p style="font-size: 0.85rem;" class="p1 ani" swiper-animate-effect="fadeInLeft">雄厚的平台实力</p>
+						<p class="p2 ani" swiper-animate-effect="fadeInRight">顶级投资，真格领投</p>
+					</div>
+					<p class="wen ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.1s">币果科技是为真格基金、BitMEX领投的数字货币资产管理平台。股东实力雄厚，其中BitMEX日交易量达200亿。</p>
+					<img src="images/security/page2/icon1.png" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.2s"/>
+					<img src="images/security/page2/icon2.png" class="ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.2s"/>
+					<img src="images/security/page2/icon3.png" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.2s"/>
+				</div>
+				<div class="swiper-slide slide3" >
+					<div class="tops">
+						<img src="images/security/page345/tit2.png" class="topimg ani" swiper-animate-effect="fadeInDown"/>
+						<p class="p1 ani" swiper-animate-effect="fadeInLeft">BitMEX&nbsp;数字货币存管</p>
+						<p class="p2 ani" swiper-animate-effect="fadeInRight">全球首家完成数字货币存管的理财平台</p>
+					</div>
+					<img src="images/security/page345/liu.png" class="cont ani" swiper-animate-effect="fadeIn"  swiper-animate-delay="0.1s" />
+					<div class="wrap">
+						<p>
+							<img src="images/security/page345/icon1.png" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.2s"/>
+							<span class="ani" swiper-animate-effect="fadeInRight">全球TOP3交易所平台存管</span>
+						</p>
+						<p>
+							<img src="images/security/page345/icon2.png" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.2s"/>
+							<span class="ani" swiper-animate-effect="fadeInRight">平台只进行撮合不触碰货币资产</span>
+						</p>
+						<p>
+							<img src="images/security/page345/icon3.png" class="ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.2s"/>
+							<span class="ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.1s">货币资产动态实时可查</span>
+						</p>
+					</div>
+				</div>
+				<div class="swiper-slide slide4" >
+					<div class="tops">
+						<img src="images/security/page345/tit3.png" class="topimg ani" swiper-animate-effect="fadeInDown"/>
+						<p class="p1 ani" swiper-animate-effect="fadeInLeft">优质渠道是币果核心竞争力</p>
+						<p class="ani" swiper-animate-effect="fadeInRight">
+							<span>6道审核工序</span>
+							<span>28层严格筛选</span>
+							<span>确保渠道安全稳定</span>
+						</p>		
+					</div>
+					<p class="cont ani" swiper-animate-effect="fadeInDown">币果理财只为用户甄选全球知名交易所平台，避免违约现象的出现。</p>
+					<img src="images/security/page345/si3.png" class="si ani" swiper-animate-effect="fadeInUp" />
+					<div class="pwrap ani" swiper-animate-effect="fadeInLeft">
+						<div>BitMEX<br/>火币<br/>OKEX<br/>交易所<br/>杠杆借贷</div>
+						<div>
+							<p>
+								<i></i>
+								<span>合作交易所具有强大投资背景和雄厚实力</span>
+							</p>
+							<p style="margin-top: .2rem;">
+								<i></i>
+								<span>保本性收益：拥有先进的平仓机制，即用杠杆借贷人亏损与否与借贷资金无关</span>
+							</p>
+						</div>
+					</div>
+					<div class="pwrap ani" swiper-animate-effect="fadeInRight" style="margin-top: 0.43rem;">
+						<div style="padding-top: 1.08rem;height: 2.55rem;">比特大陆<br/>矿场建设</div>
+						<div>
+							<p style="margin-top: .1rem;">
+								<i></i>
+								<span>不受市场波动影响</span>
+							</p>
+							<p style="margin-top: .45rem;">
+								<i></i>
+								<span>每台矿机单位时间内产量固定</span>
+							</p>
+							<p style="margin-top: .45rem;">
+								<i></i>
+								<span>可获取长期性稳健收益</span>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-slide slide5" >
+					<div class="tops">
+						<img src="images/security/page345/tit4.png" class="topimg ani" swiper-animate-effect="fadeInDown"/>
+						<p class="p1 ani" swiper-animate-effect="fadeInLeft">强大的智能分散投资技术</p>
+						<p class="p2 ani" swiper-animate-effect="fadeInRight">智能小额分散，有效降低风险</p>
+					</div>
+					<p class="cont ani" swiper-animate-effect="fadeInUp">
+						币果理财拥有国内外资深的顾问团队，构建了专业化、自动化的匹配模型。借贷资产均采用智能小额分散机制，每笔借款进行项目拆分，规避风险。
+					</p>
+					<div class="contimg ani" swiper-animate-effect="fadeIn">
+						<img src="images/security/page345/cont4.png"/>
+					</div>
+				</div>
+				<div class="swiper-slide slide6" >
+					<div class="tops">
+						<img src="images/security/page6/tit5.png" class="topimg ani" swiper-animate-effect="fadeInDown"/>
+						<p class="p1 ani" swiper-animate-effect="fadeInLeft">100% 完美兑付</p>
+						<p class="p2 ani" swiper-animate-effect="fadeInRight">用户本息0损失</p>
+					</div>
+					<p class="cont ani" swiper-animate-effect="fadeInUp">
+						币果科技自2017年成立以来，建立完备的风控体系，自建信用评估等级，严格把控每笔借贷货币资产。运营期间，资产管理规模达到1亿元，所有到期项目，均实现完美兑付零坏账，保障用户的投资安全。
+					</p>
+					<div class="contimg">
+						<img src="images/security/page6/ben.png" class="img1 ani" swiper-animate-effect="fadeInRight"/><br />
+						<img src="images/security/page6/cont.png" class="img2 ani" swiper-animate-effect="fadeInLeft"/>
+					</div>
+				</div>
+				<div class="swiper-slide slide7" >
+					<div class="tops">
+						<img src="images/security/page7/tit6.png" class="topimg ani" swiper-animate-effect="fadeInDown"/>
+						<p class="p1 ani" swiper-animate-effect="fadeInLeft">完善的网络安全防御措施</p>
+						<p class="p2 ani" swiper-animate-effect="fadeInRight">步步为营，未雨绸缪防隐患</p>
+					</div>
+					<p class="cont ani" swiper-animate-effect="fadeInUp">
+						币果理财定位于“AI赋能的数字货币理财平台”旨在利用大数据和人工智能技术，为持有加密货币者筛选优质项目资产进行货币增值，让每一位用户获取区块链红利。
+					</p>
+					<div class="liu">
+						<img src="images/security/page7/icon.png" class="icon"/>
+						<img src="images/security/page7/icon0.png" class="icon0 ani" swiper-animate-effect="fadeIn"/>
+						<img src="images/security/page7/icon1.png" class="icon1 ani" swiper-animate-effect="fadeInDown"/>
+						<img src="images/security/page7/icon2.png" class="icon2 ani" swiper-animate-effect="fadeInRight"/>
+						<img src="images/security/page7/icon3.png" class="icon3 ani" swiper-animate-effect="fadeInRight"/>
+						<img src="images/security/page7/icon4.png" class="icon4 ani" swiper-animate-effect="fadeInUp"/>
+						<img src="images/security/page7/icon5.png" class="icon5 ani" swiper-animate-effect="fadeInLeft"/>
+						<img src="images/security/page7/icon6.png" class="icon6 ani" swiper-animate-effect="fadeInLeft"/>
+					</div>
+				</div>
+				<div class="swiper-slide slide8" >
+					<div class="tops">
+						<img src="images/security/page8/tit7.png" class="topimg ani" swiper-animate-effect="fadeInDown"/>
+						<p class="p1 ani" swiper-animate-effect="fadeInLeft">专业风险控制</p>
+						<p class="p2 ani" swiper-animate-effect="fadeInRight">源头把控风险，贷后跟踪管理</p>
+					</div>
+					<p class="cont ani" swiper-animate-effect="fadeInUp">
+						通过大数据智能技术对借贷资产做反欺诈、风险评估、贷前贷中贷后实时监控追踪，以保障用户本金安全及良好的增币收益。
+					</p>
+					<div class="content">
+						<p class="p1 ani" swiper-animate-effect="fadeInLeft">
+							<span>智能大数据</span><br />
+							<span>风险系统</span>
+						</p>
+						<p class="p2 ani" swiper-animate-effect="fadeInRight">
+							<span>信用风险</span><br />
+							<span>决策引擎</span>
+						</p>
+						<img src="images/security/page8/xian.png" class="xian ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.1s"/>
+						<img src="images/security/page8/xian.png" class="xian0 ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.2s"/>
+						<p class="p3 ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.2s">
+							<span>预警机制及反欺诈</span><br />
+							<span>模型的风险识别</span>
+						</p>
+						<p class="p4 ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.2s">
+							<span>高效准确评估</span><br />
+							<span>借款机构信用等级</span>
+						</p>
+						<img src="images/security/page8/xian1.png" class="xian1 ani" swiper-animate-effect="fadeInLeft" swiper-animate-delay="0.3s"/>
+						<img src="images/security/page8/xian2.png" class="xian2 ani" swiper-animate-effect="fadeInRight" swiper-animate-delay="0.3s"/>
+						<p class="p5 ani" swiper-animate-effect="fadeInUp" swiper-animate-delay="0.4s">
+							<span>投资机构</span>
+						</p>
+					</div>
+				</div>
+				<div class="swiper-slide slide9" >
+					<div class="tops">
+						<img src="images/security/page9/tit8.png" class="topimg ani" swiper-animate-effect="fadeInDown"/>
+						<p class="p1 ani" swiper-animate-effect="fadeInLeft" style="font-size: .81rem;">资深的顾问团队</p>
+					</div>
+					<span>
+						<img src="images/security/page9/cont1.png" class="ani" swiper-animate-effect="fadeInRight"/><br />
+						<img src="images/security/page9/cont2.png" class="ani" swiper-animate-effect="fadeInLeft"/><br />
+						<img src="images/security/page9/cont3.png" class="ani" swiper-animate-effect="fadeInRight"/>
+					</span>
+					<p class="huo ani" swiper-animate-effect="fadeInDown">币果资管平台合作伙伴</p>
+					<p class="imgs">
+						<img src="images/security/page9/icon1.png" class="ani" swiper-animate-effect="fadeInLeft"/>
+						<img src="images/security/page9/icon2.png" class="ani" swiper-animate-effect="fadeInUp"/>
+						<img src="images/security/page9/icon3.png" class="ani" swiper-animate-effect="fadeInRight"/>
+					</p>
+				</div>
+			</div>
+			<div id="icon">
+				<img src="images/security/page1/jian.png"/>
+			</div>
+		</div>
+		<script language="javascript">
+			var mySwiper = new Swiper('.swiper-container', {
+				direction: "vertical",
+				onSlideChangeStart: function(swiper) {
+					if(swiper.activeIndex == 8){
+					 	$("#icon").css('display','none'); 
+					 } else {
+					 	$("#icon").css('display','block'); 
+					}
+				},
+				onInit: function(swiper){ 
+			    		swiperAnimateCache(swiper); 
+			    		swiperAnimate(swiper);
+			    },
+			    onSlideChangeEnd: function(swiper){ 
+			    		swiperAnimate(swiper);
+			    },
+			})
+		</script>
+	</body>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+</html>

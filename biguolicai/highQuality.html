@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="browsermode" content="application">
+		<meta name="x5-page-mode" content="app">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="keywords" content="币果理财">
+		<title>优质资产</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				font-family: PingFangSC-Regular, sans-serif;
+				font-weight: normal;
+				font-stretch: normal;
+				letter-spacing: 0rem;
+			}
+			
+			.highContainer {
+				margin: 0 auto;
+				width: 10rem;
+				height: auto;
+			}
+			.highContainer .tit {
+				width: 10rem;
+				height: 4.28rem;
+				background: url(images/highQuality/tit.jpg) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				text-align: center;
+				color: #ffffff;
+				padding-top: 0.001rem;
+			}
+			.highContainer .tit p {
+				font-weight: bold;
+				font-size: 0.52rem;
+				line-height: 0.64rem;
+			}
+			.highContainer .tit p:nth-child(1){
+				margin-top: 0.99rem;
+			}
+			.highContainer .tit p span {
+				display: inline-block;
+				margin-top: 0.5rem;
+				padding: 0 0.12rem;
+				font-size: 0.32rem;
+				font-weight: normal;
+				border: 0.01rem solid #FFFFFF;
+			}
+			.highContainer .hs {
+				margin: 0.7rem auto;
+				text-align: center;
+			}
+			.highContainer .hs img {
+				width: 0.74rem;
+				vertical-align: middle;
+			}
+			.highContainer .hs span {
+				margin: 0 0.2rem;
+				font-size: 0.43rem;
+				line-height: 0.61rem;
+				color: #333333;
+				vertical-align: middle;
+			}
+			.highContainer .zichan {
+				width: 9.35rem;
+				height: 11.47rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.03rem 0.53rem 0rem 
+					rgba(35, 73, 123, 0.11);
+				margin: 0 auto;
+				text-align: center;
+			}
+			.highContainer .zeng {
+				width: 9.39rem;
+				height: 9.63rem;
+				padding: 0.001rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.03rem 0.53rem 0rem 
+					rgba(35, 73, 123, 0.11);
+				margin: 0 auto;
+				text-align: center;
+			}
+			.highContainer .zeng .pwrap {
+				width: 8.61rem;
+				height: 3.67rem;
+				border-radius: 0.07rem;
+				margin: 0 auto;
+			}
+			.highContainer .zeng .pwrap div {
+				float: left;
+				font-size: 0.37rem;
+			}
+			.highContainer .zeng .pwrap div:nth-child(1) {
+				width: 1.49rem;
+				height: 3.2rem;
+				padding: 0 0.38rem;
+				padding-top: 0.45rem;
+				background-color: #2752a1;
+				color: #FFFFFF;
+				border-radius: 0.07rem 0rem 0rem 0.07rem;
+			}
+			.highContainer .zeng .pwrap div:nth-child(2) {
+				border: dashed 0.01rem #dcdcdc;
+				border-left: none;
+				width: 5.4rem;
+				height: 2.78rem;
+				padding: 0.41rem 0.45rem;
+				color: #666666;
+				text-align: left;
+				border-radius:  0rem 0.07rem 0.07rem 0rem;
+			}
+			i {
+				display: inline-block;
+				width: 0.13rem;
+				height: 0.13rem;
+				background-color: #386ccb;
+				border-radius: 100%;
+			}
+			.highContainer .zeng .pwrap div:nth-child(2) span {
+				display: inline-block;
+				width: 5rem;
+				padding-left: 0.1rem;
+				vertical-align: top;
+			}
+			.highContainer .fan {
+				width: 8.19rem;
+				height: 9.01rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.03rem 0.53rem 0rem 
+					rgba(35, 73, 123, 0.11);
+				margin: 0 auto;
+				padding: 1.04rem 0.6rem;
+				font-size: 0.37rem;
+				color: #666666;
+			}
+			.zhineng {
+				width: 9.39rem;
+				height: 11.89rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.03rem 0.53rem 0rem 
+					rgba(35, 73, 123, 0.11);
+				border-radius: 0.11rem;
+				margin: 0 auto;
+				text-align: center;
+			}
+			.zhineng .zhicont {
+				width: 7.44rem;
+				margin: 0 auto;
+				text-align: left;
+				font-size: 0.37rem;
+				color: #666666;
+			}
+			.zhineng .zhicont p {
+				margin-bottom: 0.59rem;
+			}
+			.wanbei {
+				width: 9.36rem;
+				height: 5.37rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.03rem 0.53rem 0rem 
+					rgba(35, 73, 123, 0.11);
+				border: solid 0.04rem #ffffff;
+				margin: 0 auto;
+				margin-top: 1.4rem;
+				position: relative;
+			}
+			.wanbei .wenimg {
+				width: 1.88rem;
+				position: absolute;
+				top: -0.94rem;
+				left: 3.73rem;
+			}
+			.wanbei .wancont {
+				margin-top: 1.7rem;
+			}
+			.wanbei .wancont .wanleft {
+				width: 50%;
+				height: 2.5rem;
+				font-size: 0.43rem;
+				color: #23497b;
+				text-align: center;
+				float: left;
+				border-right: solid 0.01rem #23497b;
+			}
+			.wanbei .wancont .wanleft p:nth-child(2) {
+				font-size: 0.37rem;
+				color: #666666;
+				line-height: 0.51rem;
+				text-align: left;
+				padding-left: .5rem;
+			}
+			.wanbei .wancont .wanright {
+				width: 45%;
+				border: none;
+			}
+			.wanbei .wancont .wanright p:nth-child(2) {
+				padding-left: 1rem;
+			}
+			.jiao {
+				width: 9.05rem;
+				height: 3.69rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.03rem 0.53rem 0rem 
+					rgba(35, 73, 123, 0.11);
+				margin: 0 auto;
+				margin-bottom: 1.75rem;
+				padding: 0.77rem 0.17rem;
+			}
+			.jiao p {
+				display: inline-block;
+				width: 2.6rem;
+				height: 3.36rem;
+				border: solid 0.01rem #23497b;
+				vertical-align: middle;
+				text-align: center;
+				font-size: 0.37rem;
+				color: #666666;
+			}
+			.jiao p img { 
+				width: 1.09rem;
+				margin: 0.48rem 0;
+			}
+			.jiao img {
+				width: 0.25rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="highContainer">
+			<div class="tit">
+				<p>优质资产</p>
+				<p>是币果理财核心竞争力</p>
+				<p>
+					<span>6道审核工序</span>
+					<span style="margin: 0 0.1rem;">28层严格筛选</span>
+					<span>确保渠道安全稳定</span>
+				</p>
+			</div>
+			<div class="hs">
+				<img src="images/highQuality/left.png"/>
+				<span>币果甄选最优质资产</span>
+				<img src="images/highQuality/right.png"/>
+			</div>
+			<div class="zichan">
+				<img style="width: 6.94rem;margin-top: 0.67rem;" src="images/highQuality/zichan.png"/>
+			</div>
+			<div class="hs">
+				<img src="images/highQuality/left.png"/>
+				<span>4大资产 · 稳健增币</span>
+				<img src="images/highQuality/right.png"/>
+			</div>
+			<div class="zeng">
+				<div class="pwrap" style="margin-top: 1.03rem;">
+					<div>BitMEX火币OKEX 交易所 杠杆借贷</div>
+					<div>
+						<p>
+							<i></i>
+							<span>合作交易所具有强大投资背景和雄厚实力</span>
+						</p>
+						<p style="margin-top: .2rem;">
+							<i></i>
+							<span>保本性收益：拥有先进的平仓机制，即用杠杆借贷人亏损与否与借贷资金无关</span>
+						</p>
+					</div>
+				</div>
+				<div class="pwrap" style="margin-top: 0.43rem;">
+					<div style="padding-top: 1.08rem;height: 2.55rem;">比特大陆矿场建设</div>
+					<div>
+						<p style="margin-top: .1rem;">
+							<i></i>
+							<span>不受市场波动影响</span>
+						</p>
+						<p style="margin-top: .45rem;">
+							<i></i>
+							<span>每台矿机单位时间内产量固定</span>
+						</p>
+						<p style="margin-top: .45rem;">
+							<i></i>
+							<span>可获取长期性稳健收益</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="hs">
+				<img src="images/highQuality/left.png"/>
+				<span>反欺诈风控体系</span>
+				<img src="images/highQuality/right.png"/>
+			</div>
+			<div class="fan">
+				<span>
+					通过大数据智能技术对借贷资产做反欺诈、风险评估、贷前贷中贷后实时监控追踪，以保障用户本金安全及良好的增币收益。
+				</span><br />
+				<img style="width: 8.08rem;margin-top: 0.8rem;" src="images/highQuality/feng.png"/>
+			</div>
+			<div class="hs">
+				<img src="images/highQuality/left.png"/>
+				<span>智能小额分散</span>
+				<img src="images/highQuality/right.png"/>
+			</div>
+			<div class="zhineng">
+				<img style="width: 9.17rem;margin: 0.23rem 0 1rem 0;" src="images/highQuality/san.png"/>
+				<div class="zhicont">
+					<p>在精选优质资产的基础上，投资的风险通常随资产数量的增加而降低。</p>
+					<p>币果理财拥有国内外资深的顾问团队，构建了专业化、自动化的匹配模型。借贷资产均采用智能小额分散机制，每笔借款进行项目拆分，规避风险。</p>
+				</div>
+			</div>
+			<div class="hs">
+				<img src="images/highQuality/left.png"/>
+				<span>完备的贷后管理</span>
+				<img src="images/highQuality/right.png"/>
+			</div>
+			<div class="wanbei">
+				<img class="wenimg" src="images/highQuality/dai.png"/>
+				<div class="wancont">
+					<div class="wanleft">
+						<p style="margin-bottom: 0.65rem;">到期前</p>
+						<p>
+							<span>负面信息全面筛查</span><br />
+							<span>智能合约约束回款时间</span><br />
+							<span>合同约束违约逾期提息</span>
+						</p>
+					</div>
+					<div class="wanleft wanright">
+						<p style="margin-bottom: 0.65rem;">到期前</p>
+						<p>
+							<span>智能对账</span><br />
+							<span>人工核查</span><br />
+							<span>风险报告输出</span>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="hs">
+				<img src="images/highQuality/left.png"/>
+				<span>交易所违约风险代价大</span>
+				<img src="images/highQuality/right.png"/>
+			</div>
+			<div class="jiao">
+				<p style="margin-left: 0.05rem;">
+					<img src="images/highQuality/icon1.png"/><br />
+					<span>自身平台用户</span><br />
+					<span>信用受损</span>
+				</p>
+				<img src="images/highQuality/jia.png"/>
+				<p>
+					<img src="images/highQuality/icon2.png"/><br />
+					<span>平台征信</span><br />
+					<span>受限</span>
+				</p>
+				<img src="images/highQuality/deng.png"/>
+				<p>
+					<img src="images/highQuality/icon3.png"/><br />
+					<span>失去平台</span><br />
+					<span>公信力</span>
+				</p>
+			</div>
+		</div>
+	</body>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+</html>

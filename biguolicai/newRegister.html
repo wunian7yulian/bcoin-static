@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="email=no" name="format-detection">
+		<meta name="HandheldFriendly" content="true">
+		<meta name="MobileOptimized" content="320">
+		<meta name="screen-orientation" content="portrait">
+		<meta name="x5-orientation" content="portrait">
+		<meta name="full-screen" content="yes">
+		<meta name="x5-fullscreen" content="true">
+		<meta name="browsermode" content="application">
+		<meta name="x5-page-mode" content="app">
+		<meta name="msapplication-tap-highlight" content="no">
+		<meta name="keywords" content="币果理财">
+		<title>新手注册</title>
+		<script src="js/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				font-family: PingFangSC-Regular, sans-serif;
+				font-weight: normal;
+				font-stretch: normal;
+				letter-spacing: 0rem;
+			}
+			
+			.content {
+				margin: 0 auto;
+				width: 10rem;
+				height: auto;
+				background-color: #f9f0ff;
+				text-align: center;
+			}
+			.content .top {
+				height: 16.12rem;
+				margin: 0 auto;
+				position: relative;
+			}
+			.content .tiao{
+				width: 9.88rem;
+				position: absolute;
+				left: .05rem;
+				top: 7.17rem;
+				z-index: 2;
+			}
+			.content .lingwrap {
+				width: 9.37rem;
+				height: 8.01rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.05rem 0.2rem 0.01rem 
+					rgba(214, 54, 194, 0.29);
+				border-radius: 0.08rem;
+				position: absolute;
+				left: .31rem;
+				top: 7.32rem;
+				z-index: 3;
+			}
+			.content .lingwrap .but {
+				width: 5.35rem;
+				line-height: 1.08rem;
+				background-image: linear-gradient(-90deg, 
+					#9730ff 0%, 
+					#9c31fb 13%, 
+					#af38eb 31%, 
+					#dc48c9 60%, 
+					#ff54ad 81%, 
+					#ff54ae 90%), 
+				linear-gradient(
+					#4f0909, 
+					#4f0909);
+				background-blend-mode: normal, 
+					normal;
+				border-radius: 0.53rem;
+				font-size: 0.48rem;
+				color: #ffffff;
+				margin: .3rem auto 0 auto;
+			}
+			.content .zhuan {
+				width: 9.36rem;
+				height: 5.56rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.05rem 0.2rem 0.01rem 
+					rgba(214, 54, 194, 0.29);
+				border-radius: 0.08rem;
+				margin: .39rem auto .84rem auto;
+			}
+			.content .zhuan p {
+				display: inline-block;
+				width: 4.01rem;
+				height: 4.51rem;
+				background: url(images/newRegister/lihe.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				margin: .57rem .22rem 0 .22rem;
+			}
+			.content .zhuan p img {
+				width: 3.8rem;
+				margin-top: .83rem;
+			}
+			.content .zhuan p span {
+				display: inline-block;
+				width: 2.96rem;
+				line-height: 0.64rem;
+				background-color: #ffaf24;
+				border-radius: 0.32rem;
+				font-size: 0.32rem;
+				color: #FFFFFF;
+				margin-top: .15rem;
+				box-shadow: .03rem .03rem .03rem #ff4800;
+			}
+			.content .cuoshi {
+				width: 9.36rem;
+				height: 11.79rem;
+				background-color: #ffffff;
+				box-shadow: 0rem 0.05rem 0.2rem 0.01rem 
+					rgba(214, 54, 194, 0.29);
+				border-radius: 0.08rem;
+				margin: .35rem auto .95rem auto;
+			}
+			.content .cuoshi .top {
+				width: 5.33rem;
+				height: 0.98rem;
+				line-height: 0.98rem;
+				background: url(images/newRegister/bao.png) no-repeat;
+				background-size: 100% 100%;
+				background-position: center;
+				font-size: 0.37rem;
+				color: #FFFFFF;
+			}
+			.content .cuoshi .icons {
+				width: 100%;
+				height: 6.05rem;
+				margin: 0 auto;
+				text-align: left;
+				font-size: 0.32rem;
+				color: #383838;
+				position: relative;
+			}
+			.content .cuoshi .icons .icon01 {
+				width: 2.6rem;
+				height: 2.76rem;
+				background: url(images/newRegister/img1.png) no-repeat;
+				background-size: 1.92rem 1.81rem;
+				position: absolute;
+				left: 1.12rem;
+				top: .65rem;
+			}
+			.content .cuoshi .icons .icon02 {
+				width: 2.6rem;
+				height: 2.84rem;
+				background: url(images/newRegister/img3.png) no-repeat;
+				background-size: 1.69rem 1.78rem;
+				position: absolute;
+				left: 6.27rem;
+				top: .65rem;
+			}
+			.content .cuoshi .icons .icon03 {
+				width: 2.6rem;
+				height: 2.76rem;
+				background: url(images/newRegister/img2.png) no-repeat;
+				background-size: 2.01rem 1.94rem;
+				position: absolute;
+				left: 3.65rem;
+				top: 2.39rem;
+			}
+			.content .cuoshi .icons img {
+				width: 0.52rem;
+				margin-top: 1.8rem;
+			}
+			.content .cuoshi .icons .span2 {
+				margin-left: .63rem;
+			}
+			.content .cuoshi .icons .icon03 img {
+				margin-top: 2rem;
+			}
+			.content .cuoshi a {
+				text-decoration: none;
+			}
+			.content .huo {
+				width: 9.05rem;
+				height: 8.4rem;
+				margin: 0 auto;
+				background: url(images/newRegister/kuang.png) no-repeat;
+				background-size: 9.05rem 7.18rem;
+				background-position-y: .2rem;
+				color: #875605;
+			}
+			.content .huo p {
+				font-size: 0.48rem;
+			}
+			.content .huo ul {
+				display: inline-block;
+				width: 7.5rem;
+				text-align: left;
+				margin: .15rem 0 0 .29rem;
+				font-size: 0.37rem;
+			}
+			.content .huo ul li {
+				margin-bottom: .12rem;
+			}
+			.content .jie {
+				font-size: 0.37rem;
+				color: #d1abed;
+			}
+			.content .diimg {
+				display: block;
+				width: 10rem;
+				margin-top: 1.7rem;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="content">
+			<div class="top">
+				<img style="width: 10rem;" src="images/newRegister/banner.png" />
+				<img class="tiao" src="images/newRegister/tiao.png"/>
+				<div class="lingwrap">
+					<img style="width: 8.2rem;margin: .15rem 0 .5rem 0;" src="images/newRegister/hao.png"/><br />
+					<img style="width: 8.18rem;" src="images/newRegister/fuli.png"/>
+					<div class="but" onclick="toRegister()">立即领取</div>
+				</div>
+			</div>
+			<img style="width: 8.96rem;" src="images/newRegister/tit1.png"/>
+			<div class="zhuan">
+				<p>
+					<img src="images/newRegister/ling1.png"/><br />
+					<span onclick="product1()">立即购买</span>
+				</p>
+				<p>
+					<img src="images/newRegister/ling5.png"/><br />
+					<span onclick="product2()">立即购买</span>
+				</p>
+			</div>
+			<img style="width: 8.98rem;" src="images/newRegister/cuo.png"/>
+			<div class="cuoshi">
+				<p class="top">为您的资金保驾护航</p>
+				<div class="icons">
+					<div class="icon01">
+						<img src="images/newRegister/01.png"/>
+						<span>风险把控</span><br />
+						<span class="span2">层层识别</span>
+					</div>
+					<div class="icon02">
+						<img src="images/newRegister/02.png"/>
+						<span>运营稳健</span><br />
+						<span class="span2">股东背书</span>
+					</div>
+					<div class="icon03">
+						<img src="images/newRegister/03.png"/>
+						<span>顶级存管</span><br />
+						<span class="span2">资金安全</span>
+					</div>
+				</div>
+				<img style="width: 6.37rem;margin-bottom: .6rem;" src="images/newRegister/jia.png"/><br />
+				<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=f69b29f140a3b296e940ef323ad791864019d5a730de2f2535c135d048fc52f5">
+					<img style="width: 2.73rem;" src="images/newRegister/qq.png" />
+				</a>
+				<img style="width: 2.73rem;margin-left: 1.5rem;" src="images/newRegister/Telegram.png" class="btn" />
+				<input type="hidden" id="dian" value="https://t.me/imbgo" />
+			</div>
+			<div class="huo">
+				<p>活动说明&nbsp;&nbsp;</p>
+				<ul>
+					<li>活动仅针对首次注册用户；</li>
+					<li>体验金请在注册后的一个月内完成购买，否则将失效；</li>
+					<li>注册体验金将在用户注册完成后发放到账户，可在【我的】账户中查看；</li>
+					<li>所有体验金奖励，均可享受3天收益，到期后体验金自动收回；</li>
+					<li>每个身份证仅限参加一次，刷奖及冒用他人身份证、手机号者一经核实，取消活动资格，所得奖励不予兑换。如对活动有任何疑问请致电币果理财服务热线：400-007-0627。</li>
+				</ul>
+			</div>
+			<p class="jie">本活动最终解释权归币果理财所有</p>
+			<img class="diimg" src="images/newRegister/di.png"/>
+		</div>
+		<script type="text/javascript">
+			function product1() {
+				//BTC
+				window.location='bb://1000##{"productId":"1"}';
+			}
+			function product2() {
+				//ETH
+				window.location='bb://1000##{"productId":"2"}';
+			}
+			function toRegister() {
+				//唤醒原生注册
+				window.location='bb://1000##{"toRegister":"1"}';
+			}
+			
+			//复制电报号
+		    var content = $("#dian").val();  
+		    var clipboard = new Clipboard('.btn', {  
+		        text: function() {
+		            return content;
+		        }
+		    });
+		    clipboard.on('success', function(e) {  
+		        alert("复制成功");
+		    });
+		    clipboard.on('error', function(e) {
+		         alert("复制失败，请重试");
+		    });
+		</script>
+	</body>
+	<script src="js/flexible.js" type="text/javascript" charset="utf-8"></script>
+</html>
